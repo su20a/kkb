@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 通过apply / call 来实现继承
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+        this.eat = function(){
+            console.log('eat')
+        }
+    }
+    Person.prototype.say = function(){
+        console.log(this.name);
+    }
+    function Man(name,age,like){
+        Person.call(this,name,age);
+        this.like = like;
+    }
+    Man.prototype = new Person();
+    Man.prototype.constructor = Man;
+    var p = new Man('李四',19,'football');
+    p.say();
+</script>
+</html>
