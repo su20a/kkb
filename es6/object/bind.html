@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Person(name){
+        this.name = name;
+        this.say = function(){
+            console.log(this.name);
+        }
+    }
+    var p = new Person('lisi');
+    // 这么写相当于把say方法中的this指向了document 所以输出 undefined
+   // document.onclick = p.say;
+
+   // 通过bind绑定后p.say方法中的this就不会发生变化了
+      document.onclick = p.say.bind(p);
+</script>
+</html>
