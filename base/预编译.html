@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    if(!('num' in window)){
+        var num = 12;
+    }
+    console.log(num);
+    /*
+    *  以上代码会输出 undefined
+    *  首先不管if语句是否成立，再预解释时num都被提升到全局，也就是预解释时window.num = undefined;
+    *  然后代码执行时 window中已经有了num属性 if语句不成立 输出undefined
+    * */
+
+    if(!('num' in window)){
+        let num = 12;
+    }
+    console.log(num);
+   /*
+   *    把var 改成 let 结果大不相同  let 定义的变量不会变量提升 作用域限制在if语句块内
+   *    对于全局来说没有num 故而会报错
+   * */
+   var number = 10;
+   function getNum(){
+       console.log(number);
+   }
+   function wrap(){
+       var number = 100;
+       getNum();
+   }
+   wrap();
+</script>
+</html>

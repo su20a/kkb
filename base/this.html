@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="div"></div>
+</body>
+<script>
+    //如何区分this
+    // 1 函数执行，首先看函数前是否有'.' 有的话 前面是谁this就指谁，没有的话this就是指window
+    // 2 自执行函数中的this永远是window
+    // 3 给元素的某一个事件绑定方法，当事件触发的时候，执行对用的方法，this指该元素
+    function fn(){
+        console.log(this);
+    }
+    document.getElementById('div').onclick = function(){
+        //this ---> window
+        fn();  // fn函数中的this仍指向window
+    }
+
+    // 练习
+    var num = 20;
+    var obj = {
+        num: 30,
+        fn: (function (num) {
+            this.num *= 3;
+            num += 15;
+            var num = 45;
+            return function () {
+                this.num *= 4;
+                num += 20;
+                console.log(num);
+            }
+        })(num)
+    };
+    var q1 = obj.fn;
+    q1();
+    obj.fn();
+    console.log(window.num,obj.num);
+</script>
+</html>
