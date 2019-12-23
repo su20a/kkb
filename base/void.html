@@ -11,22 +11,40 @@
 
 </body>
 <script>
-    Array.prototype.myUnique = function(){
-        var obj = {};
-        for(var i=0;i<this.length;i++){
-            var cur = this[i];
-            if(obj[cur] == cur){
-                this[i] = this[this.length - 1];
+   Array.prototype.myUnique = function(){
+       let obj = {};
+       for(let i=0;i<this.length;i++){
+            let cur = this[i];
+            if(obj[cur] === cur){
+                this[i] = this[this.length-1];
                 this.length--;
                 i--;
                 continue;
             }
             obj[cur] = cur;
-        }
-        obj = null;
-    }
-    var arr = [12,34,56,56,12];
-    arr.myUnique();
-    console.log(arr);
+       }
+       obj = null;
+   }
+   let arr = [12,12,43,12,43,3];
+   arr.myUnique();
+   console.log(arr);
+   
+   // 保持数组原有的顺序
+   Array.prototype.orderUnique = function(){
+       let obj = {};
+       for(let i=0;i<this.length;i++){
+           let cur = this[i];
+           if(obj[cur] === cur){
+               this.splice(i,1);
+               i--;
+               continue;
+           }
+           obj[cur] = cur;
+       }
+       obj = null;
+   }
+   let arrs = [12,12,43,12,43,3];
+   arrs.orderUnique();
+   console.log(arrs);
 </script>
 </html>

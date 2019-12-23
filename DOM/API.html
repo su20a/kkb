@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap{
+            height:300px;
+            color:green;
+        }
+        .item{
+            display:inline-block;
+            width:200px;
+            height:300px;
+            outline: 1px solid pink;;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item" id="item1">
+            <p class="itemP" data-name="ls" onclick="fn(this)">1234</p>
+            <p class="itemP">1234</p>
+        </div>
+    </div>
+</body>
+<script>
+    var item1 = document.getElementById('item1');
+    item1.parentElement.style.color = "red";
+    var ps = document.querySelectorAll(".itemP");
+    function fn(o){
+        console.log(o);
+    }
+   // ps[0].setAttribute('onclick','');
+    ps[0].addEventListener('click',function(){
+        console.log(this);
+        console.dir(this);
+        console.dir(this.getAttribute('data-name'));
+    })
+   //item1.childNodes
+</script>
+</html>
