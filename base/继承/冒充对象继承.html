@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    *  这种方法就是把父类当一个对象在子类中遍历一遍，把私有属性和原型链上的属性都添加到子类中
+    * */
+    function A(){
+        this.x = 3;
+    }
+    A.prototype.say = function(){
+        console.log(this.x)
+    }
+    function B(){
+        let temp = new B;
+        for(let key in temp){
+            this[key] = temp[key];
+        }
+        temp = null;
+    }
+    var b = new B;
+</script>
+</html>

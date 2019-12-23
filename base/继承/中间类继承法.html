@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    * 中间类继承法 为作者自创名字
+    * 兼容性不好
+    * */
+    function count(){
+        // argument的__proto__ 指向数组的原型，这样就能调用数组的方法。
+        // 缺点是，在IE浏览器中改变__proto__的引用地址式无效的
+        arguments.__proto__ = Array.prototype;
+    }
+
+</script>
+</html>

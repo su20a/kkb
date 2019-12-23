@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // call继承 只能获取到父类的私有属性方法，原型链上的属性是取不到的。
+    function A(){
+        this.x = 3;
+    }
+    A.prototype.say = function(){
+        console.log(this.x);
+    }
+    function B(){
+        A.call(this);
+        this.y = 4;
+    }
+    var b = new B;
+    console.log(b);
+</script>
+</html>
