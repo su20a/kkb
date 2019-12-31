@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    debugger;
+    var num = 123;
+    function foo(str){
+        var fooOne = 'this'+str;
+        var count = 1;
+        return function(num){
+            return count+num;
+        }
+    }
+    var f = foo('haha');
+    console.log(f(5));
+    
+
+</script>
+</html>
