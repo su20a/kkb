@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap{
+            border:1px solid green;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+       <p class="item">first</p>
+    </div>
+    <p id="paragraph" class="paragraph" data-index=1>123</p>
+</body>
+<script src="./domApi.js"></script>
+<script>
+    var arrays = [1,2,3];
+    //$6.init('#wrap');
+    // beforebegin 元素前面 afterend 元素后面   afterbegin元素里面第一个元素的前面 beforeend元素里面最后一个元素的后面
+    document.querySelector('#wrap').insertAdjacentHTML('beforeend',"<b>12</b>")
+
+    var my = document.createElement('div');
+    var myT = document.createTextNode('my name');
+    my.appendChild(myT);
+    document.querySelector('#wrap').insertAdjacentElement('beforeend',my);
+    var p1 = document.getElementsByClassName('item')[0].cloneNode(true);
+    var p2 = document.getElementById('paragraph');
+    document.getElementsByTagName('body')[0].replaceChild(p1,p2);
+</script>
+</html>
