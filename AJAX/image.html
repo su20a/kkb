@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a id="itemA" href="http://www.baidu.com">baidu</a>
+    <span id="itemSpan">我是span</span>
+    <p id="itemp">just i p</p>
+</body>
+<script>
+    debugger;
+    var selector = 0;
+var nativeDOM = typeof selector === 'object' ? [selector] : (
+      this.selector = selector,document.querySelectorAll(selector || null)
+    );
+</script>
+</html>
