@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var as = [12, 3, 4, 5, [34, 5, 56]];
+    var objs = {
+        name: 'lisi',
+        school: {
+            schoolOne: 'xixi',
+            schoolTwo: 'haha'
+        },
+        age: as
+    }
+
+    function deepCopy(obj) {
+        var res = {};
+
+        function s(obj, res, type) {
+            for (var key in obj) {
+                if (typeof obj[key] == 'object') {
+                    if (Object.prototype.toString.call(obj[key]) == "[object Object]") {
+                        res[key] = {};
+                        s(obj[key], res[key]);
+                    } else if (Object.prototype.toString.call(obj[key]) == "[object Array]") {
+                        res[key] = [];
+                        s(obj[key], res[key], true);
+                    }
+                } else {
+                    if (type) {
+                        res.push(obj[key]);
+                    } else {
+                        res[key] = obj[key];
+                    }
+
+                }
+            }
+        }
+        s(obj, res);
+        return res;
+    }
+    var r = deepCopy(objs);
+
+    // 另一种写法  只能拷贝对象，数组也被转成了对象。
+    function deepClone(o1, o2) {
+        for (let k in o2) {
+            if (typeof o2[k] === 'object') {
+                o1[k] = {};
+                deepClone(o1[k], o2[k]);
+            } else {
+                o1[k] = o2[k];
+            }
+        }
+    }
+    // 测试用例
+    let obj = {
+        b: [1, 2, 3, [33, 44, 55]]
+    };
+    let emptyObj = Object.create(null);
+    deepClone(emptyObj, objs);
+    console.log(emptyObj)
+    console.log('-----------斐波那契数列的第n项值------------------');
+
+    let count = 0;
+
+    function fn(n) {
+        let cache = {};
+
+        function _fn(n) {
+            if (cache[n]) {
+                return cache[n];
+            }
+            count++;
+            if (n == 1 || n == 2) {
+                return 1;
+            }
+            let prev = _fn(n - 1);
+            cache[n - 1] = prev;
+            let next = _fn(n - 2);
+            cache[n - 2] = next;
+            return prev + next;
+        }
+        return _fn(n);
+    }
+
+    let count2 = 0;
+
+    function fn2(n) {
+        count2++;
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+        return fn2(n - 1) + fn2(n - 2);
+    }
+ 
+    let count3 = 0;
+    function fn3(n){
+        var arr = [1,1];
+        for(var i=2;i<n;i++){
+            count3++;
+            arr.push(arr[i-1]+arr[i-2]);
+        }
+        return arr[n-1];
+    }
+    console.time('fn1')
+    console.log(fn(5), count); // 6765 20
+    console.timeEnd('fn1')
+    console.time('fn2')
+    console.log(fn2(5), count2); // 6765 13529
+    console.timeEnd('fn2')
+    console.time('fn3')
+    console.log(fn3(5), count3);
+    console.timeEnd('fn3')
+</script>
+
+</html>

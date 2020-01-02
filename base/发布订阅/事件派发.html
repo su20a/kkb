@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class myEvent{
+        constructor(){
+            this.events = {};
+        }
+        on(type,fn){
+            if(this.events[type] == undefined && typeof fn == 'function'){
+                this.events[type] = [];
+            }
+                // 判断fn是否已经存在
+                var index = this.events[type].findIndex(function(val){
+                    return fn == val;
+                })
+                if(index == -1){
+                    this.events[type].push(fn);
+                }
+        }
+        off(type,fn){
+            // 第二个参数，表示要解绑的函数，如果没传或传的不是函数，则全部解绑
+            if(typeof fn == 'function'){
+                if(this.events[type] && this.events[type].length > 0){
+                    var index = this.events[type].findIndex(function(val){
+                        return fn == val;
+                    })
+                    if(index !== -1){
+                        this.events[type].splice(index[0],1);
+                    }
+                }
+            }else{
+                delete this.events[type];
+            }
+            
+        }
+        trigger(type,...arg){
+            if(this.events[type] !== undefined){
+                this.events[type].forEach(function(fn){
+                    fn(...arg);
+                })
+            }
+        }
+    }
+    var my = new myEvent;
+    function say(){
+        console.log(arguments);
+        
+    }
+    function tell(){
+        console.log('我告诉你');
+        
+    }
+    debugger;
+    my.on('me',say);
+    my.on('me',say);
+    my.on('me',tell);
+    my.trigger('me','hah','洗洗');
+    my.off('me',say);
+    my.trigger('me','第二次')
+</script>
+</html>
