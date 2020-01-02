@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent1 {
+            overflow: hidden;
+            background: skyblue;
+        }
+
+        .children1 {
+            width: 300px;
+            margin: 50px auto;
+            background: yellow;
+        }
+
+        .parent2 {
+            position: relative;
+            height: 300px;
+            background: skyblue;
+        }
+
+        .children2 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            background: yellow;
+        }
+
+        .parent3 {
+            position: relative;
+            height: 300px;
+            background: skyblue;
+        }
+
+        .children3 {
+            /* 同时设定了绝对定位的top,left,right,bottom为0,又设置了width,height，则width,height的值决定元素的宽高 */
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent1">
+        <div class="children1">
+            父div要设置overflow:hidden;或 padding:1px; 或 border:1px solid red;
+            不然子div的margin无法撑开父盒子，反而像父盒子上有了margin值一样。
+        </div>
+    </div>
+    <br />
+    <div class="parent2">
+        <div class="children2">
+            绝对定位方式,通过定位到50%的位置，然后再移回来一半自身的宽高
+        </div>
+    </div>
+    <br />
+    <div class="parent3">
+        <div class="children3">
+            绝对定位，用margin:auto;
+        </div>
+    </div>
+</body>
+
+</html>
