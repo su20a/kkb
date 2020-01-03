@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputOne">
+    <br>
+    <input type="text" id="inputTwo">
+</body>
+<script>
+/*
+* 防抖就是 每次触发时都清空定时器，再设置一个定时器，这样连续触发下，只执行最后一次触发
+*/
+var timer;
+var inputOne = document.getElementById('inputOne');
+inputOne.addEventListener('keyup',function(){
+    clearTimeout(timer);
+    var that = this;
+    timer = setTimeout(function(){
+        var {value} = that;
+        console.log(value);
+        console.log(this);
+    }, 200);
+})
+// debounce 防抖封装
+function debounce(fn,wait){
+    var timer;
+    return function(){
+        var args = arguments;
+        var that = this;
+        if(timer) clearTimeout(timer);
+        timer = setTimeout(function(){
+            fn.apply(that,args);
+        }, wait);
+    }
+}
+var inputTwo = document.getElementById('inputTwo');
+var f = debounce(function(){
+        console.log(this.value);
+    },200);
+inputTwo.addEventListener('keyup',f);
+</script>
+</html>
