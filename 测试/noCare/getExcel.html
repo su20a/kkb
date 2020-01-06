@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script src="https://cdn.bootcss.com/xlsx/0.15.1/xlsx.full.min.js"></script>
+    </head>
+ 
+    <body>
+        <input type="file" onchange="sendfile(this)" />
+        <div id="zzdemo"></div>
+        <script>
+            var zzexcel;
+            function sendfile(obj) {
+                if(!obj.files) {
+                    return;
+                }
+                var f = obj.files[0];
+                var reader = new FileReader();
+                reader.readAsBinaryString(f);
+                reader.onload = function(e) {
+                    var data = e.target.result;
+                        zzexcel = XLSX.read(data, {
+                            type: 'binary'
+                        });
+                    for(var i=0;i<zzexcel.SheetNames.length;i++){
+            　　　　　　document.getElementById("zzdemo").innerHTML +=zzexcel.SheetNames[i]+"="+JSON.stringify(XLSX.utils.sheet_to_json(zzexcel.Sheets[zzexcel.SheetNames[i]]))+"<br/>";
+        　　　　　　}
+                }
+            }
+        </script>
+    </body>
+</html>
