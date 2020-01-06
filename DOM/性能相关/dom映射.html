@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        #wrap p:nth-child(2n){
+            background:yellow;
+            color:green;
+            height:36px;
+            line-height: 36px;
+            text-shadow: black;
+            padding-left:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        
+    </div>
+</body>
+<script>
+    /*
+    *  通过对比使用文档碎片并没有比逐个appendChild，和innerHTML方式快。
+    */
+    // 生成指定长度的随机字符的数组
+    function makeArray(length){
+        var res = [];
+        for(var i=0;i<length;i++){
+            res.push(new Date().valueOf())
+        }
+        return res;
+    }
+    // 重复10轮，每轮写入8000个p元素
+    function methodOne(data){
+        // 每生成一个元素直接写入
+        console.time('methodOne');
+        var wrap = document.getElementById("wrap");
+        for(var i=0,len=data.length;i<len;i++){
+            var p = document.createElement('p');
+            var pText =document.createTextNode(i+' :'+data[i]);
+            var attr = document.createAttributeNS
+            p.appendChild(pText);
+            wrap.appendChild(p);
+        }
+        console.timeEnd('methodOne');
+    }
+    function methodOne_hidden(data){
+        // 每生成一个元素直接写入
+        console.time('methodOne_hidden');
+        var wrap = document.getElementById("wrap");
+        wrap.style.display = 'none';
+        for(var i=0,len=data.length;i<len;i++){
+            var p = document.createElement('p');
+            var pText =document.createTextNode(i+' :'+data[i]);
+            var attr = document.createAttributeNS
+            p.appendChild(pText);
+            wrap.appendChild(p);
+        }
+        wrap.style.display = 'block';
+        console.timeEnd('methodOne_hidden');
+    }
+    function methodTwo(data){
+        // 每生成一个元素直接写入
+        console.time('methodTwo');
+        var wrap = document.getElementById("wrap");
+        var frag = document.createDocumentFragment();
+        for(var i=0,len=data.length;i<len;i++){
+            var p = document.createElement('p');
+            var pText =document.createTextNode(i+' :'+data[i]);
+            p.appendChild(pText);
+            frag.appendChild(p);
+        }
+        wrap.appendChild(frag);
+        console.timeEnd('methodTwo');
+    }
+
+    function methodThree(data){
+        // innerHTML方式
+        console.time('methodThree');
+        var wrap = document.getElementById("wrap");
+        var str = "";
+        for(var i=0,len=data.length;i<len;i++){
+            str+= "<p>"+i+" :"+data[i]+"</p>";
+        }
+        wrap.innerHTML = str;
+        console.timeEnd('methodThree');
+    }
+
+    function test(data){
+        console.time('test');
+        for(var i=0,len=data.length;i<len;i++){
+            var res = 1 *5;
+        }
+        console.timeEnd('test');
+    }
+
+    console.time('load')
+   // methodOne(makeArray(8000));
+   // methodOne_hidden(makeArray(80000));
+    methodTwo(makeArray(8000));
+   // methodThree(makeArray(80000));
+   // test(makeArray(8));
+    window.onload = function(){
+        console.timeEnd('load');
+        console.log("加载完毕")
+    }
+    
+</script>
+</html>
