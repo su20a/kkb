@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragrah" data-name="oneP" data-info="段落说明">123</p>
+    <p  onclick="say()">123</p>
+    <div id="wrap">xixi</div>
+</body>
+<script>
+    // setAttribute  getAttribute  hasAttribute
+    var pOne = document.getElementById('paragrah');
+    var say = function(){
+        console.log('4321');
+    }
+    var b = function(){
+        return "say()";
+    }
+    pOne.setAttribute('onclick',b());
+    pOne.setAttribute('style','color:red;');
+    console.log(pOne.hasAttribute('class'))
+    console.log(pOne.dataset);
+
+    // 样式相关API
+    var wrap = document.querySelector("#wrap");
+    // 设置样式
+    wrap.style.setProperty('color','blue');
+    wrap.style.setProperty('font-weight','bold');
+    // 移除样式
+    wrap.style.removeProperty('color');
+    
+    // 获取元素的某个属性值
+    wrap.getAttributeNode("id");
+
+    // 获取属性集合
+    var wrapAttr = wrap.attributes;
+    // 获取属性集合中的具体的某个属性
+    var getId = wrapAttr.getNamedItem('id');
+    console.log(getId);
+    // 设置属性  注意，不能直接wrapAttr.setNamedItem('id','newId') 
+    var att = document.createAttribute('id');
+    att.value = 'newWrap';
+    wrapAttr.setNamedItem(att);
+    console.log(wrap.id);
+    // 移除一个属性节点
+    wrapAttr.removeNamedItem('id');
+    console.log(wrap.id);
+    // 获取指定位置的节点属性
+    wrapAttr.item(0);
+</script>
+</html>

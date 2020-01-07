@@ -23,7 +23,7 @@
     function B(){
         A.call(this)
     }
-    B.prototype = createObject(a.prototype);
+    B.prototype = createObject(A.prototype);
     B.prototype.constructor = B;
     var b = new B;
     var bb = new B;
