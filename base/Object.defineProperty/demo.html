@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var obj = {};
+    Object.defineProperty(obj,'name',{
+        value:'hah',
+        writable:true,
+        configurable:false,
+        enumerable:true
+    })
+    console.log(obj.name);
+    obj.name = 'change';
+    console.log(obj.name);
+    // 将可写属性改为false; configurable为false状态下，writable可以由true改为false，但是不能由false改为true。其他的不能改
+    Object.defineProperty(obj,'name',{
+        writable:false
+    })
+    obj.name = 'change again';
+    console.log(obj.name);
+</script>
+</html>
