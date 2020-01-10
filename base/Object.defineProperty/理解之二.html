@@ -98,18 +98,18 @@
         IQ: 150
     })
 
-    // watcher(hero, 'type', () => {
-    //     return hero.health > 4000 ? '坦克' : '脆皮'
-    // })
+    watcher(hero, 'type', () => {
+        return hero.health > 4000 ? '坦克' : '脆皮'
+    })
     // watcher(hero,'hh',()=>{
     //     return hero.health > 400 ? '强' : '弱'
     // })
 
-    // console.log(`英雄初始类型：${hero.type}`)
+    //console.log(`英雄初始类型：${hero.type}`)
     // console.log(hero.hh);
-
+    console.log(123);
     hero.health = 5000
-    hero.IQ = 999
+    console.log(hero.type);
 </script>
 
 </html>
