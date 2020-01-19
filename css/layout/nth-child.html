@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .first li:not(:last-child)::after{
+            content:","
+        }
+        /* 这里感觉有点奇怪，-n+3 可以  3-n 就不行了 */
+        .second li:nth-child(-n+3){
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="first">
+        <li>er</li>
+        <li>er</li>
+        <li>er</li>
+        <li>er</li>
+    </ul>
+    <ul class="second">
+        <li>er1</li>
+        <li>er2</li>
+        <li>er3</li>
+        <li>er4</li>
+    </ul>
+</body>
+</html>

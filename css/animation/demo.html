@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background:rgb(185, 201, 209);
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<b>jjj</b>
+</body>
+    <script>
+        function w(data){
+            debugger;
+            var b = document.getElementsByTagName('body')[0];
+            b.innerText = data;
+        }
+        var arr = [1,2,3,4,5,6,7,8];
+        var even = arr.filter(item=>item%2==0);
+        var av = arr.reduce((total,item,index,arr)=>{
+            return index == arr.length-1 ? (total+item) / arr.length : total+item;
+        },0)
+        var str = '';
+        arr.forEach(function(item){
+            str += item;
+        })
+        var arr2 = [1,2,3,4,2,2,1];
+        var res = arr2.reduce((o,item,index,arr)=>{
+            o[item] === undefined ? o[item] = 1 : o[item]++;
+            return o;
+        },{})
+        console.log(res);
+        // 把数组拍平
+        var res = [];
+        function levelArr(arr){
+            arr.forEach((item,index)=>{
+                Object.prototype.toString.call(item) === "[object Array]" ? levelArr(item) : res.push(item);
+            })
+        }
+        var a1 = [1,2,3,[4,5,[6,7,[8,9]]],9,4,['a',['b',['c']]]];
+        levelArr(a1);
+        console.log(res);
+        function levelArrIndex(arr,level=Infinity){
+            var initLevel = 1;
+            var res = [];
+            function levelArr(arr,init){
+                
+              arr.forEach((item,index)=>{
+                  Object.prototype.toString.call(item) === "[object Array]" && init <= level ? levelArr(item,++initLevel) : res.push(item);
+
+              })
+            }
+            levelArr(arr,0);
+            return res;
+        }
+        var result = levelArrIndex(a1,3);
+        console.log('==========')
+        console.log(result);
+    </script>
+</html>
