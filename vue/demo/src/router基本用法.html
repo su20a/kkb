@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+</body>
+<script src="../node_modules/vue/dist/vue.min.js"></script>
+<script src="../node_modules/vue-router/dist/vue-router.min.js"></script>
+<script>
+    // 让vue使用VueRouter
+    //vue.use(VueRouter); // 用模块的时候 要写这个
+    var Login = {
+        template:`<div>我是登录页面</div>`
+    }
+    var Register = {
+        template:`<div>我是注册页面</div>`
+    }
+    // 创建vue-router对象
+    // 引入vue-router模块后会抛出两个全局组件  router-link 和 router-view
+    var router = new VueRouter({
+        routes:[
+            // 路由匹配的规则
+            {
+                path:"/login",
+                component:Login
+            },
+            {
+                path:"/register",
+                component:Register
+            }
+        ]
+    })
+    
+    var APP = {
+        template:`
+        <div>
+            123
+            <router-link to='/login'>登录</router-link>
+            <router-link to='/register'>注册</router-link>
+            <router-view></router-view>
+        </div>
+        `
+    }
+    new Vue({
+        el:"#app",
+        data(){
+
+        },
+        components:{
+            APP
+        },
+        template:`<APP />`,
+        router
+    })
+</script>
+</html>

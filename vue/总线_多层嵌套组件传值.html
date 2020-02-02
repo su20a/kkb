@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    var bus = new Vue();
+var childone = {
+    template:`
+        <div> 
+            one{{say}} <button @click="childBtn">孙子按钮</button>
+        </div>
+    `,
+    props:['say'],
+    methods:{
+        childBtn(){
+            bus.$emit('su',{
+                name:'lisi',
+                age:19
+            })
+        }
+    }
+}
+var childtwo = {
+    template:`
+        <childone ></childone>
+    `,
+    components:{
+        childone
+    }
+}
+var APP = {
+    data(){
+        return {
+            msg:'主组件入场',
+            count:0
+        }
+    },
+    template:`
+        <div>
+            {{msg}} - {{ count }} <vbtn @countAdd="countAdd" /> 
+            <childtwo say='祖上的组件1'></childtwo>
+        </div>
+    `,
+    methods:{
+        countAdd(){
+            console.log(123);
+            this.count++;
+        },
+        childTwo(){
+            console.log('孙子组件的事件触发了');
+        }
+    },
+    components:{
+        childtwo
+    },
+    mounted(){
+        bus.$on('su',({name,age})=>{
+            console.log('孙子组件的事件');
+            console.log(name);
+        })
+    }
+}
+// 声明全局组件
+Vue.component('vbtn',{
+    data(){
+        return {
+            say:'hello'
+        }
+    },
+    template:`
+        <button @click="countAdd">按钮</button>
+    `,
+    methods:{
+        countAdd(){
+            console.log(456);
+            this.$emit('countAdd')
+        }
+    },
+    beforeCreate(){
+        console.log(this);
+    },
+    created(){
+        console.log(this);
+    }
+})
+new Vue({
+    el:'#app',
+    components:{
+        APP
+    },
+    template:`
+        <div> <APP /> </div>
+    `
+})
+</script>
+</html>
