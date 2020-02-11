@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // return new Promise(()=>{})   可以中断promise
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve('哈哈')
+        }, 1000);
+    }).then(
+        val => {console.log('接到值了'+val);}
+    ).then(
+        val => {console.log('接到值2'+val);return new Promise(()=>{})}
+    ).catch(
+        reason => {
+            console.log('抛出异常了2'+reason);
+        }
+    ).then(
+        val => console.log('值3'+val)
+    )
+</script>
+</html>
