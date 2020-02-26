@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var str = `
+    <th style="width: 6%">分类</th>
+                            <th style="width: 6%">条形码</th>
+                            <th style="width: 6%">存货编码</th>
+                            <th style="width: 8%">存货名称</th>
+                            <th style="width: 6%">规格</th>
+                            <th style="width: 7%;">报废数量</th>
+                            <th style="width: 7%;">实际报废数量</th>
+                            <th style="width: 7%">最小数量</th>
+                            <th style="width: 6%;">内包装</th>
+                            <th style="width: 6%">外包装</th>
+                            <th style="width:7%;">报废单价</th>
+                            <th style="width:7%;">报废金额</th>
+                            <th style="width:7%;">报损原因</th>
+                            <th style="width:7%;">备注</th>
+                            <th style="width:7%;">货架</th>
+    `;
+    var regexp = /(\d+)/g;
+    var arr = str.match(regexp);
+    var sum = arr.reduce((sum,item)=>{
+        return sum+(item-0);
+    },0)
+    console.log(sum);
+</script>
+</html>

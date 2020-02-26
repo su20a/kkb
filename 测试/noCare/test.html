@@ -1,0 +1,5186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // pc端权限分离
+    var data = {
+  "data": {
+    "code": 0,
+    "data": [
+      {
+        "childrenList": [
+          {
+            "childrenList": [
+              {
+                "id": 43,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:applyTakeGoods:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 40,
+                "url": ""
+              },
+              {
+                "id": 46,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:applyTakeGoods:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 40,
+                "url": ""
+              },
+              {
+                "id": 47,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:applyTakeGoods:approval",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 40,
+                "url": ""
+              },
+              {
+                "id": 48,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:applyTakeGoods:batchSummary",
+                "menuName": "生成要货单",
+                "menuType": "BUTTON",
+                "parentId": 40,
+                "url": ""
+              },
+              {
+                "id": 52,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:applyTakeGoods:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 40,
+                "url": ""
+              },
+              {
+                "id": 509,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:applyTakeGoods:reApproval",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 40,
+                "url": ""
+              }
+            ],
+            "id": 40,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "takeGoods:applyTakeGoods",
+            "menuName": "要货申请",
+            "menuType": "PAGE",
+            "parentId": 38,
+            "url": "/supply/apply/applyTakeGoods/applyTakeGoodsShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 187,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTakeGoods:create",
+                "menuName": "创建（修改）",
+                "menuType": "BUTTON",
+                "parentId": 186,
+                "url": ""
+              },
+              {
+                "id": 190,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTakeGoods:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 186,
+                "url": ""
+              },
+              {
+                "id": 191,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTakeGoods:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 186,
+                "url": ""
+              },
+              {
+                "id": 192,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTakeGoods:confirm",
+                "menuName": "确认入库",
+                "menuType": "BUTTON",
+                "parentId": 186,
+                "url": ""
+              },
+              {
+                "id": 398,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTakeGoods:repeatedInbound",
+                "menuName": "反入库",
+                "menuType": "BUTTON",
+                "parentId": 186,
+                "url": ""
+              },
+              {
+                "id": 523,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTakeGoods:import",
+                "menuName": "导入",
+                "menuType": "BUTTON",
+                "parentId": 186,
+                "url": ""
+              },
+              {
+                "id": 534,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTakeGoods:batchImport",
+                "menuName": "批量导入",
+                "menuType": "BUTTON",
+                "parentId": 186,
+                "url": ""
+              },
+              {
+                "id": 542,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTakeGoods:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 186,
+                "url": ""
+              },
+              {
+                "id": 543,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTakeGoods:deleteAllIned",
+                "menuName": "批量删除",
+                "menuType": "BUTTON",
+                "parentId": 186,
+                "url": ""
+              }
+            ],
+            "id": 186,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:inboundTakeGoods",
+            "menuName": "要货入库",
+            "menuType": "PAGE",
+            "parentId": 38,
+            "url": "/supply/inbound/inboundTakeGoods/inboundTakeGoodsShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 97,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 98,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 99,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:approval",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 100,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:reApproval",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 101,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 102,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:outboundConfirm",
+                "menuName": "确认出库",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 103,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:submit",
+                "menuName": "生成入库单",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 104,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 105,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 401,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:repeatedOutbound",
+                "menuName": "反出库",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 454,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:resubmit",
+                "menuName": "重新提交",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 538,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:batchImport",
+                "menuName": "批量导入",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              },
+              {
+                "id": 539,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:return:deleteOuted",
+                "menuName": "撤销退货",
+                "menuType": "BUTTON",
+                "parentId": 96,
+                "url": ""
+              }
+            ],
+            "id": 96,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "takeGoods:return",
+            "menuName": "要货退货",
+            "menuType": "PAGE",
+            "parentId": 38,
+            "url": "/supply/returns/returnTakeGoods/takeGoodsReturnShow"
+          }
+        ],
+        "id": 38,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "takegoods",
+        "menuName": "要货管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "childrenList": [
+              {
+                "id": 55,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:create",
+                "menuName": "创建（修改）",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 56,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 62,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:approval",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 64,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 67,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:batchPurchase",
+                "menuName": "生成采购申请单",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 74,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:split",
+                "menuName": "分单",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 75,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:batchOutbound",
+                "menuName": "生成出库单",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 76,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 77,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 78,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:generateProcurement",
+                "menuName": "生成采购单",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 455,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:deliverApplySummary",
+                "menuName": "配送申请汇总",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              },
+              {
+                "id": 506,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:summaryTakeGoods:sortDetails",
+                "menuName": "详情排序",
+                "menuType": "BUTTON",
+                "parentId": 54,
+                "url": ""
+              }
+            ],
+            "id": 54,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "takeGoods:summaryTakeGoods",
+            "menuName": "要货单",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/summary/summaryTakeGoods/summaryTaksGoodsShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 150,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 151,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 152,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 153,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:confirm",
+                "menuName": "确认出库",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 154,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:send",
+                "menuName": "生成装车单",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 155,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:generateInbound",
+                "menuName": "生成入库单",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 156,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 157,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 158,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:reversalDetail",
+                "menuName": "查看冲销详情",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 376,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:reversalList",
+                "menuName": "冲销单查询",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              },
+              {
+                "id": 399,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTakeGoods:repeatedOutbound",
+                "menuName": "反出库",
+                "menuType": "BUTTON",
+                "parentId": 149,
+                "url": ""
+              }
+            ],
+            "id": 149,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:outboundTakeGoods",
+            "menuName": "要货出库",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/outbound/outboundTakeGoods/outboundTakeGoodsShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 200,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:takeGoodsReturnInbound:create",
+                "menuName": "创建（修改）",
+                "menuType": "BUTTON",
+                "parentId": 198,
+                "url": ""
+              },
+              {
+                "id": 201,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:takeGoodsReturnInbound:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 198,
+                "url": ""
+              },
+              {
+                "id": 202,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:takeGoodsReturnInbound:confirm",
+                "menuName": "确认入库",
+                "menuType": "BUTTON",
+                "parentId": 198,
+                "url": ""
+              },
+              {
+                "id": 203,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:takeGoodsReturnInbound:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 198,
+                "url": ""
+              },
+              {
+                "id": 204,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:takeGoodsReturnInbound:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 198,
+                "url": ""
+              },
+              {
+                "id": 400,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:takeGoodsReturnInbound:repeatedInbound",
+                "menuName": "反入库",
+                "menuType": "BUTTON",
+                "parentId": 198,
+                "url": ""
+              },
+              {
+                "id": 404,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:takeGoodsReturnInbound:sendBack",
+                "menuName": "退回",
+                "menuType": "BUTTON",
+                "parentId": 198,
+                "url": ""
+              }
+            ],
+            "id": 198,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:takeGoodsReturnInbound",
+            "menuName": "要货退货入库",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/returns/takeGoodsReturnInbound/takeGoodsReturnInboundShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 85,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:difference:process",
+                "menuName": "差异处理",
+                "menuType": "BUTTON",
+                "parentId": 84,
+                "url": ""
+              }
+            ],
+            "id": 84,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "takeGoods:difference",
+            "menuName": "差异处理",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/difference/difference/differenceShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 164,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:distribution:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 162,
+                "url": ""
+              },
+              {
+                "id": 166,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:distribution:confirm",
+                "menuName": "确认装车",
+                "menuType": "BUTTON",
+                "parentId": 162,
+                "url": ""
+              },
+              {
+                "id": 168,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:distribution:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 162,
+                "url": ""
+              },
+              {
+                "id": 169,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:distribution:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 162,
+                "url": ""
+              },
+              {
+                "id": 170,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:distribution:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 162,
+                "url": ""
+              }
+            ],
+            "id": 162,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "delivery:distribution",
+            "menuName": "装车单",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/distribution/distributionTakeGoods/distributionTakeGoodsShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 227,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:distributionCentre:create",
+                "menuName": "创建（修改）",
+                "menuType": "BUTTON",
+                "parentId": 226,
+                "url": ""
+              },
+              {
+                "id": 228,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:distributionCentre:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 226,
+                "url": ""
+              },
+              {
+                "id": 229,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:distributionCentre:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 226,
+                "url": ""
+              },
+              {
+                "id": 230,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:distributionCentre:isEnable",
+                "menuName": "启用（禁用）",
+                "menuType": "BUTTON",
+                "parentId": 226,
+                "url": ""
+              }
+            ],
+            "id": 226,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "delivery:distributionCentre",
+            "menuName": "配送中心",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/distribution/distributionCentre/distributionCentreShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 275,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:add",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 276,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:del",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 277,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:batchSet",
+                "menuName": "批量设置",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 278,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:historyPrice",
+                "menuName": "历史配送价",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 279,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:batchAddOrSubPrice",
+                "menuName": "统一加价",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 280,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:batchCopy",
+                "menuName": "批量复制",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 281,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:batchUse",
+                "menuName": "批量应用",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 282,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:historyListExport",
+                "menuName": "历史配送价导出",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 283,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:downloadExcelTpl",
+                "menuName": "导出模板",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 284,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:importExcel",
+                "menuName": "导入模板",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 285,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:batchImport",
+                "menuName": "批量导入",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              },
+              {
+                "id": 286,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "deliverynewDishesDistributionPrice:exporter",
+                "menuName": "当前配送价导出",
+                "menuType": "BUTTON",
+                "parentId": 250,
+                "url": ""
+              }
+            ],
+            "id": 250,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "deliverynewDishesDistributionPrice",
+            "menuName": "配送价配置",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/config/newDishesDistributionPrice/view"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 119,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:splitConfig:batchSet",
+                "menuName": "批量设置",
+                "menuType": "BUTTON",
+                "parentId": 118,
+                "url": ""
+              },
+              {
+                "id": 120,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "takeGoods:splitConfig:batchUse",
+                "menuName": "批量应用",
+                "menuType": "BUTTON",
+                "parentId": 118,
+                "url": ""
+              }
+            ],
+            "id": 118,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "takeGoods:splitConfig",
+            "menuName": "要货分单设置",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/config/splitConfig/splitConfigShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 390,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:supplyConfig:batchSet",
+                "menuName": "批量设置",
+                "menuType": "BUTTON",
+                "parentId": 206,
+                "url": ""
+              },
+              {
+                "id": 391,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:supplyConfig:set",
+                "menuName": "设置",
+                "menuType": "BUTTON",
+                "parentId": 206,
+                "url": ""
+              }
+            ],
+            "id": 206,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "basicInfo:supplyConfig:timeTake",
+            "menuName": "要货时间限制",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/config/supplyConfig/configTimeTakeTreeShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 222,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:carroute:create",
+                "menuName": "创建（修改）",
+                "menuType": "BUTTON",
+                "parentId": 221,
+                "url": ""
+              },
+              {
+                "id": 223,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:carroute:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 221,
+                "url": ""
+              },
+              {
+                "id": 224,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:carroute:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 221,
+                "url": ""
+              },
+              {
+                "id": 225,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "delivery:carroute:isEnable",
+                "menuName": "启用（禁用）",
+                "menuType": "BUTTON",
+                "parentId": 221,
+                "url": ""
+              }
+            ],
+            "id": 221,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "delivery:carroute",
+            "menuName": "装车路线",
+            "menuType": "PAGE",
+            "parentId": 160,
+            "url": "/supply/carroute/carRouteShow"
+          }
+        ],
+        "id": 160,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "delivery",
+        "menuName": "配送管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "childrenList": [
+              {
+                "id": 31,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:applyProcurement:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 30,
+                "url": ""
+              },
+              {
+                "id": 32,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:applyProcurement:approval",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 30,
+                "url": ""
+              },
+              {
+                "id": 33,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:applyProcurement:reApproval",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 30,
+                "url": ""
+              },
+              {
+                "id": 34,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:applyProcurement:generate",
+                "menuName": "生成采购单",
+                "menuType": "BUTTON",
+                "parentId": 30,
+                "url": ""
+              },
+              {
+                "id": 35,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:applyProcurement:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 30,
+                "url": ""
+              },
+              {
+                "id": 49,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:applyProcurement:export",
+                "menuName": "采购申请明细",
+                "menuType": "BUTTON",
+                "parentId": 30,
+                "url": ""
+              },
+              {
+                "id": 183,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:applyProcurement:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 30,
+                "url": ""
+              }
+            ],
+            "id": 30,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "procurement:applyProcurement",
+            "menuName": "采购申请",
+            "menuType": "PAGE",
+            "parentId": 5,
+            "url": "/supply/apply/applyProcurement/index"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 36,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:summaryProcurement:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 29,
+                "url": ""
+              },
+              {
+                "id": 37,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:summaryProcurement:approval",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 29,
+                "url": ""
+              },
+              {
+                "id": 39,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:summaryProcurement:reApproval",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 29,
+                "url": ""
+              },
+              {
+                "id": 41,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:summaryProcurement:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 29,
+                "url": ""
+              },
+              {
+                "id": 42,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:summaryProcurement:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 29,
+                "url": ""
+              },
+              {
+                "id": 44,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:summaryProcurement:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 29,
+                "url": ""
+              },
+              {
+                "id": 45,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:summaryProcurement:generate",
+                "menuName": "生成入库单",
+                "menuType": "BUTTON",
+                "parentId": 29,
+                "url": ""
+              },
+              {
+                "id": 50,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:summaryProcurement:detailExport",
+                "menuName": "采购明细",
+                "menuType": "BUTTON",
+                "parentId": 29,
+                "url": ""
+              },
+              {
+                "id": 185,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:summaryProcurement:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 29,
+                "url": ""
+              }
+            ],
+            "id": 29,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "procurement:summaryProcurement",
+            "menuName": "采购单",
+            "menuType": "PAGE",
+            "parentId": 5,
+            "url": "/supply/summary/summaryProcurement/index"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 57,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              },
+              {
+                "id": 58,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              },
+              {
+                "id": 59,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              },
+              {
+                "id": 60,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              },
+              {
+                "id": 81,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:confirm",
+                "menuName": "确认入库",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              },
+              {
+                "id": 189,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              },
+              {
+                "id": 419,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:repeatedInbound",
+                "menuName": "反入库",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              },
+              {
+                "id": 545,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:batchConfirm",
+                "menuName": "批量确认入库",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              },
+              {
+                "id": 546,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:batchDelete",
+                "menuName": "批量删除",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              },
+              {
+                "id": 575,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundProcurement:approval",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 53,
+                "url": ""
+              }
+            ],
+            "id": 53,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:inboundProcurement",
+            "menuName": "采购入库",
+            "menuType": "PAGE",
+            "parentId": 5,
+            "url": "/supply/inbound/inboundProcurement/index"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 63,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              },
+              {
+                "id": 65,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:createByOrder",
+                "menuName": "按订单退货",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              },
+              {
+                "id": 66,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:approval",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              },
+              {
+                "id": 70,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              },
+              {
+                "id": 68,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:reApproval",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              },
+              {
+                "id": 71,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:confirm",
+                "menuName": "确认出库",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              },
+              {
+                "id": 72,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              },
+              {
+                "id": 73,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              },
+              {
+                "id": 188,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              },
+              {
+                "id": 420,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "procurement:returnProcurement:repeatedOutbound",
+                "menuName": "反出库",
+                "menuType": "BUTTON",
+                "parentId": 61,
+                "url": ""
+              }
+            ],
+            "id": 61,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "procurement:returnProcurement",
+            "menuName": "采购退货",
+            "menuType": "PAGE",
+            "parentId": 5,
+            "url": "/supply/returns/returnProcurement/list"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 174,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierManagement:set",
+                "menuName": "设置供货",
+                "menuType": "BUTTON",
+                "parentId": 173,
+                "url": ""
+              },
+              {
+                "id": 175,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierManagement:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 173,
+                "url": ""
+              },
+              {
+                "id": 176,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierManagement:audit",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 173,
+                "url": ""
+              },
+              {
+                "id": 177,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierManagement:unAudit",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 173,
+                "url": ""
+              },
+              {
+                "id": 179,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierManagement:validity",
+                "menuName": "生效",
+                "menuType": "BUTTON",
+                "parentId": 173,
+                "url": ""
+              },
+              {
+                "id": 181,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierManagement:failure",
+                "menuName": "失效",
+                "menuType": "BUTTON",
+                "parentId": 173,
+                "url": ""
+              },
+              {
+                "id": 182,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierManagement:leadIn",
+                "menuName": "批量导入",
+                "menuType": "BUTTON",
+                "parentId": 173,
+                "url": ""
+              },
+              {
+                "id": 184,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierManagement:exportDownload",
+                "menuName": "导出所有",
+                "menuType": "BUTTON",
+                "parentId": 173,
+                "url": ""
+              },
+              {
+                "id": 528,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierManagement:getSupplyManagementHistory",
+                "menuName": "历史供货价",
+                "menuType": "BUTTON",
+                "parentId": 173,
+                "url": ""
+              }
+            ],
+            "id": 173,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "supply:supplierManagement",
+            "menuName": "供货管理",
+            "menuType": "PAGE",
+            "parentId": 5,
+            "url": "/supply/supplier/supplyManagement/supplyManagementShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 135,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplier:create",
+                "menuName": "创建或修改",
+                "menuType": "BUTTON",
+                "parentId": 127,
+                "url": ""
+              },
+              {
+                "id": 138,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplier:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 127,
+                "url": ""
+              },
+              {
+                "id": 139,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplier:audit",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 127,
+                "url": ""
+              },
+              {
+                "id": 140,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplier:unAudit",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 127,
+                "url": ""
+              },
+              {
+                "id": 141,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplier:validity",
+                "menuName": "生效",
+                "menuType": "BUTTON",
+                "parentId": 127,
+                "url": ""
+              },
+              {
+                "id": 144,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplier:failure",
+                "menuName": "失效",
+                "menuType": "BUTTON",
+                "parentId": 127,
+                "url": ""
+              },
+              {
+                "id": 145,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplier:import",
+                "menuName": "导入",
+                "menuType": "BUTTON",
+                "parentId": 127,
+                "url": ""
+              },
+              {
+                "id": 148,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplier:impower",
+                "menuName": "组织授权",
+                "menuType": "BUTTON",
+                "parentId": 127,
+                "url": ""
+              },
+              {
+                "id": 171,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplier:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 127,
+                "url": ""
+              }
+            ],
+            "id": 127,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "supply:supplier",
+            "menuName": "供应商档案",
+            "menuType": "PAGE",
+            "parentId": 5,
+            "url": "/supply/supplier/supplierFile/supplierShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 161,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierClassification:create",
+                "menuName": "创建或修改",
+                "menuType": "BUTTON",
+                "parentId": 159,
+                "url": ""
+              },
+              {
+                "id": 163,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierClassification:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 159,
+                "url": ""
+              },
+              {
+                "id": 165,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierClassification:enable",
+                "menuName": "启用",
+                "menuType": "BUTTON",
+                "parentId": 159,
+                "url": ""
+              },
+              {
+                "id": 167,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierClassification:disable",
+                "menuName": "禁用",
+                "menuType": "BUTTON",
+                "parentId": 159,
+                "url": ""
+              },
+              {
+                "id": 172,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "supply:supplierClassification:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 159,
+                "url": ""
+              }
+            ],
+            "id": 159,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "supply:supplierClassification",
+            "menuName": "供应商分类",
+            "menuType": "PAGE",
+            "parentId": 5,
+            "url": "/supply/supplier/supplierClassification/supplierClassificationShow"
+          }
+        ],
+        "id": 5,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "procurement",
+        "menuName": "采购管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "childrenList": [
+              {
+                "id": 249,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOrder:create",
+                "menuName": "创建或修改",
+                "menuType": "BUTTON",
+                "parentId": 248,
+                "url": ""
+              },
+              {
+                "id": 251,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOrder:audit",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 248,
+                "url": ""
+              },
+              {
+                "id": 252,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOrder:unAudit",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 248,
+                "url": ""
+              },
+              {
+                "id": 253,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOrder:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 248,
+                "url": ""
+              },
+              {
+                "id": 254,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOrder:buildOutbound",
+                "menuName": "生成出库单",
+                "menuType": "BUTTON",
+                "parentId": 248,
+                "url": ""
+              },
+              {
+                "id": 255,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOrder:exporter",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 248,
+                "url": ""
+              },
+              {
+                "id": 256,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOrder:printer",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 248,
+                "url": ""
+              },
+              {
+                "id": 318,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOrder:pay",
+                "menuName": "付款",
+                "menuType": "BUTTON",
+                "parentId": 248,
+                "url": ""
+              },
+              {
+                "id": 421,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOrder:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 248,
+                "url": ""
+              }
+            ],
+            "id": 248,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "market:marketOrder",
+            "menuName": "销售订单",
+            "menuType": "PAGE",
+            "parentId": 238,
+            "url": "/supply/market/order/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 265,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOutbound:create",
+                "menuName": "创建或修改",
+                "menuType": "BUTTON",
+                "parentId": 264,
+                "url": ""
+              },
+              {
+                "id": 480,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOutbound:detail",
+                "menuName": "详情",
+                "menuType": "MENU",
+                "parentId": 264,
+                "url": ""
+              },
+              {
+                "id": 266,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOutbound:doOutbound",
+                "menuName": "确认出库",
+                "menuType": "BUTTON",
+                "parentId": 264,
+                "url": ""
+              },
+              {
+                "id": 267,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOutbound:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 264,
+                "url": ""
+              },
+              {
+                "id": 268,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOutbound:exporter",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 264,
+                "url": ""
+              },
+              {
+                "id": 269,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOutbound:printer",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 264,
+                "url": ""
+              },
+              {
+                "id": 483,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketOutbound:undoOutbound",
+                "menuName": "撤销出库",
+                "menuType": "MENU",
+                "parentId": 264,
+                "url": ""
+              }
+            ],
+            "id": 264,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "market:marketOutbound",
+            "menuName": "销售出库单",
+            "menuType": "PAGE",
+            "parentId": 238,
+            "url": "/supply/market/outbound/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 300,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketReturn:create",
+                "menuName": "创建或修改",
+                "menuType": "BUTTON",
+                "parentId": 299,
+                "url": ""
+              },
+              {
+                "id": 301,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketReturn:buildInboundThenDo",
+                "menuName": "确认退货",
+                "menuType": "BUTTON",
+                "parentId": 299,
+                "url": ""
+              },
+              {
+                "id": 302,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketReturn:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 299,
+                "url": ""
+              },
+              {
+                "id": 303,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketReturn:exporter",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 299,
+                "url": ""
+              },
+              {
+                "id": 304,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketReturn:printer",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 299,
+                "url": ""
+              },
+              {
+                "id": 305,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketReturn:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 299,
+                "url": ""
+              }
+            ],
+            "id": 299,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "market:marketReturn",
+            "menuName": "销售退货",
+            "menuType": "PAGE",
+            "parentId": 238,
+            "url": "/supply/market/return/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 258,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketPrice:set",
+                "menuName": "设置",
+                "menuType": "BUTTON",
+                "parentId": 257,
+                "url": ""
+              },
+              {
+                "id": 259,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketPrice:batchCopy",
+                "menuName": "全部应用于",
+                "menuType": "BUTTON",
+                "parentId": 257,
+                "url": ""
+              },
+              {
+                "id": 260,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketPrice:batchAddOrSubPrice",
+                "menuName": "统一加价",
+                "menuType": "BUTTON",
+                "parentId": 257,
+                "url": ""
+              },
+              {
+                "id": 261,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketPrice:batchUse",
+                "menuName": "批量应用",
+                "menuType": "BUTTON",
+                "parentId": 257,
+                "url": ""
+              },
+              {
+                "id": 262,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketPrice:historyPrice",
+                "menuName": "历史销售价查询",
+                "menuType": "BUTTON",
+                "parentId": 257,
+                "url": ""
+              },
+              {
+                "id": 263,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketPrice:batchImport",
+                "menuName": "批量导入",
+                "menuType": "BUTTON",
+                "parentId": 257,
+                "url": ""
+              },
+              {
+                "id": 552,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketPrice:del",
+                "menuName": "删除销售报价",
+                "menuType": "BUTTON",
+                "parentId": 257,
+                "url": ""
+              }
+            ],
+            "id": 257,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "market:marketPrice",
+            "menuName": "销售报价",
+            "menuType": "PAGE",
+            "parentId": 238,
+            "url": "/supply/market/price/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 240,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketCustomer:create",
+                "menuName": "创建或修改",
+                "menuType": "BUTTON",
+                "parentId": 239,
+                "url": ""
+              },
+              {
+                "id": 241,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketCustomer:enable",
+                "menuName": "启用",
+                "menuType": "BUTTON",
+                "parentId": 239,
+                "url": ""
+              },
+              {
+                "id": 242,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketCustomer:disabled",
+                "menuName": "禁用",
+                "menuType": "BUTTON",
+                "parentId": 239,
+                "url": ""
+              },
+              {
+                "id": 243,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketCustomer:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 239,
+                "url": ""
+              },
+              {
+                "id": 422,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "market:marketCustomer:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 239,
+                "url": ""
+              }
+            ],
+            "id": 239,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "market:marketCustomer",
+            "menuName": "客户档案",
+            "menuType": "PAGE",
+            "parentId": 238,
+            "url": "/supply/market/customer/indexView"
+          }
+        ],
+        "id": 238,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "market",
+        "menuName": "销售管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "childrenList": [
+              {
+                "id": 374,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processBom:batchUse",
+                "menuName": "批量应用",
+                "menuType": "BUTTON",
+                "parentId": 339,
+                "url": ""
+              },
+              {
+                "id": 375,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processBom:save",
+                "menuName": "保存",
+                "menuType": "BUTTON",
+                "parentId": 339,
+                "url": ""
+              }
+            ],
+            "id": 339,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "process:processBom",
+            "menuName": "物料清单",
+            "menuType": "PAGE",
+            "parentId": 330,
+            "url": "/supply/process/bom/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 340,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 341,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:batchCreate",
+                "menuName": "批量创建",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 342,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:copy",
+                "menuName": "复制",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 343,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 344,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:setState",
+                "menuName": "审核/反审",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 604,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:buildTakeMaterial",
+                "menuName": "生成领料单",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 345,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:buildOutbound",
+                "menuName": "加工领料",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 346,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:buildInbound",
+                "menuName": "成品入库",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 347,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:doneProcess",
+                "menuName": "确认完工",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 348,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:cancelProcess",
+                "menuName": "取消加工",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 349,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:buildReturn",
+                "menuName": "原料退回",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 350,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:exporter",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 351,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:printer",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 352,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              },
+              {
+                "id": 353,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processPlan:edit",
+                "menuName": "修改",
+                "menuType": "BUTTON",
+                "parentId": 335,
+                "url": ""
+              }
+            ],
+            "id": 335,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "process:processPlan",
+            "menuName": "加工计划单",
+            "menuType": "PAGE",
+            "parentId": 330,
+            "url": "/supply/process/plan/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 597,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processTakeMaterial:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 596,
+                "url": ""
+              },
+              {
+                "id": 598,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processTakeMaterial:setState",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 596,
+                "url": ""
+              },
+              {
+                "id": 599,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processTakeMaterial:exporter",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 596,
+                "url": ""
+              },
+              {
+                "id": 600,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processTakeMaterial:apply",
+                "menuName": "生成领料出库单",
+                "menuType": "BUTTON",
+                "parentId": 596,
+                "url": ""
+              },
+              {
+                "id": 601,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processTakeMaterial:printer",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 596,
+                "url": ""
+              },
+              {
+                "id": 602,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processTakeMaterial:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 596,
+                "url": ""
+              },
+              {
+                "id": 603,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processTakeMaterial:edit",
+                "menuName": "修改",
+                "menuType": "BUTTON",
+                "parentId": 596,
+                "url": ""
+              }
+            ],
+            "id": 596,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "process:processTakeMaterail",
+            "menuName": "加工领料单",
+            "menuType": "PAGE",
+            "parentId": 330,
+            "url": "/supply/process/pick/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 355,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processOutbound:doOutbound",
+                "menuName": "确认领用",
+                "menuType": "BUTTON",
+                "parentId": 336,
+                "url": ""
+              },
+              {
+                "id": 356,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processOutbound:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 336,
+                "url": ""
+              },
+              {
+                "id": 357,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processOutbound:exporter",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 336,
+                "url": ""
+              },
+              {
+                "id": 358,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processOutbound:printer",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 336,
+                "url": ""
+              },
+              {
+                "id": 359,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processOutbound:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 336,
+                "url": ""
+              },
+              {
+                "id": 360,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processOutbound:edit",
+                "menuName": "修改",
+                "menuType": "BUTTON",
+                "parentId": 336,
+                "url": ""
+              }
+            ],
+            "id": 336,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "process:processOutbound",
+            "menuName": "领用出库单",
+            "menuType": "PAGE",
+            "parentId": 330,
+            "url": "/supply/process/outbound/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 361,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processInbound:doInbound",
+                "menuName": "确认入库",
+                "menuType": "BUTTON",
+                "parentId": 337,
+                "url": ""
+              },
+              {
+                "id": 362,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processInbound:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 337,
+                "url": ""
+              },
+              {
+                "id": 363,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processInbound:exporter",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 337,
+                "url": ""
+              },
+              {
+                "id": 364,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processInbound:printer",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 337,
+                "url": ""
+              },
+              {
+                "id": 365,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processInbound:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 337,
+                "url": ""
+              },
+              {
+                "id": 366,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processInbound:edit",
+                "menuName": "修改",
+                "menuType": "BUTTON",
+                "parentId": 337,
+                "url": ""
+              }
+            ],
+            "id": 337,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "process:processInbound",
+            "menuName": "成品入库单",
+            "menuType": "PAGE",
+            "parentId": 330,
+            "url": "/supply/process/inbound/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 367,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processReturn:doReturn",
+                "menuName": "确认退回",
+                "menuType": "BUTTON",
+                "parentId": 338,
+                "url": ""
+              },
+              {
+                "id": 368,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processReturn:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 338,
+                "url": ""
+              },
+              {
+                "id": 369,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processReturn:exporter",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 338,
+                "url": ""
+              },
+              {
+                "id": 532,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processReturn:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 338,
+                "url": ""
+              },
+              {
+                "id": 370,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processReturn:printer",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 338,
+                "url": ""
+              },
+              {
+                "id": 372,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "process:processReturn:edit",
+                "menuName": "修改",
+                "menuType": "BUTTON",
+                "parentId": 338,
+                "url": ""
+              }
+            ],
+            "id": 338,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "process:processReturn",
+            "menuName": "加工退料单",
+            "menuType": "PAGE",
+            "parentId": 330,
+            "url": "/supply/process/return/indexView"
+          }
+        ],
+        "id": 330,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "process",
+        "menuName": "加工管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "childrenList": [
+              {
+                "id": 12,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              },
+              {
+                "id": 13,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              },
+              {
+                "id": 14,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:approvalAll",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              },
+              {
+                "id": 19,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:reApproval",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              },
+              {
+                "id": 21,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:confirmDamaged",
+                "menuName": "确认报损",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              },
+              {
+                "id": 22,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              },
+              {
+                "id": 23,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              },
+              {
+                "id": 51,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              },
+              {
+                "id": 550,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:repeated",
+                "menuName": "反报废",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              },
+              {
+                "id": 588,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:damaged:dataTransfer",
+                "menuName": "数据转移",
+                "menuType": "BUTTON",
+                "parentId": 11,
+                "url": ""
+              }
+            ],
+            "id": 11,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:damaged",
+            "menuName": "报废单",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/damaged/damaged/damagedShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 88,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:transfer:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 87,
+                "url": ""
+              },
+              {
+                "id": 89,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:transfer:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 87,
+                "url": ""
+              },
+              {
+                "id": 90,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:transfer:approval",
+                "menuName": "审核",
+                "menuType": "BUTTON",
+                "parentId": 87,
+                "url": ""
+              },
+              {
+                "id": 91,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:transfer:reApproval",
+                "menuName": "反审",
+                "menuType": "BUTTON",
+                "parentId": 87,
+                "url": ""
+              },
+              {
+                "id": 92,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:transfer:generate",
+                "menuName": "生成出库单",
+                "menuType": "BUTTON",
+                "parentId": 87,
+                "url": ""
+              },
+              {
+                "id": 93,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:transfer:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 87,
+                "url": ""
+              },
+              {
+                "id": 94,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:transfer:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 87,
+                "url": ""
+              },
+              {
+                "id": 95,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:transfer:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 87,
+                "url": ""
+              }
+            ],
+            "id": 87,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:transfer",
+            "menuName": "调拨单",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/transfer/transfer/transferShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 108,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTransfer:confirm",
+                "menuName": "确认调出",
+                "menuType": "BUTTON",
+                "parentId": 106,
+                "url": ""
+              },
+              {
+                "id": 109,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTransfer:generate",
+                "menuName": "生成调入单",
+                "menuType": "BUTTON",
+                "parentId": 106,
+                "url": ""
+              },
+              {
+                "id": 110,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTransfer:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 106,
+                "url": ""
+              },
+              {
+                "id": 111,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTransfer:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 106,
+                "url": ""
+              },
+              {
+                "id": 112,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTransfer:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 106,
+                "url": ""
+              },
+              {
+                "id": 113,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTransfer:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 106,
+                "url": ""
+              },
+              {
+                "id": 418,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTransfer:repeatedOutbound",
+                "menuName": "反出库",
+                "menuType": "BUTTON",
+                "parentId": 106,
+                "url": ""
+              },
+              {
+                "id": 541,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:outboundTransfer:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 106,
+                "url": ""
+              }
+            ],
+            "id": 106,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:outboundTransfer",
+            "menuName": "调拨出库单",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/transfer/outboundTransfer/outboundTransferShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 114,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTransfer:confirm",
+                "menuName": "确认调入",
+                "menuType": "BUTTON",
+                "parentId": 107,
+                "url": ""
+              },
+              {
+                "id": 115,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTransfer:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 107,
+                "url": ""
+              },
+              {
+                "id": 116,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTransfer:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 107,
+                "url": ""
+              },
+              {
+                "id": 117,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTransfer:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 107,
+                "url": ""
+              },
+              {
+                "id": 416,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTransfer:reject",
+                "menuName": "退回",
+                "menuType": "BUTTON",
+                "parentId": 107,
+                "url": ""
+              },
+              {
+                "id": 417,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTransfer:repeatedInbound",
+                "menuName": "反入库",
+                "menuType": "BUTTON",
+                "parentId": 107,
+                "url": ""
+              },
+              {
+                "id": 548,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:inboundTransfer:batchConfirm",
+                "menuName": "批量确认调入",
+                "menuType": "BUTTON",
+                "parentId": 107,
+                "url": ""
+              }
+            ],
+            "id": 107,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:inboundTransfer",
+            "menuName": "调拨入库单",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/transfer/inboundTransfer/inboundTransferShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 556,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:create",
+                "menuName": "创建门店调拨",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 557,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:outboundTransferConfirm",
+                "menuName": "确认调出",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 558,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:outboundTransferDetail",
+                "menuName": "调拨出库单详情",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 559,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:outboundTransferDelete",
+                "menuName": "删除调拨出库单",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 560,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:outboundTransferRepeatedOutbound",
+                "menuName": "调拨出库单反出库",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 561,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:outboundTransferPrint",
+                "menuName": "打印调拨出库单",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 562,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:outboundTransferExport",
+                "menuName": "调拨出库单导出",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 564,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:inboundTransferConfirm",
+                "menuName": "确认调入",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 565,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:inboundTransferDetail",
+                "menuName": "调拨入库单详情",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 566,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:inboundTransferReject",
+                "menuName": "调拨退回",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 567,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:inboundTransferRepeatedInbound",
+                "menuName": "调拨入库单反入库",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 569,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:inboundTransferExport",
+                "menuName": "调拨入库单导出",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 572,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:inboundTransferPrint",
+                "menuName": "打印调拨入库单",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              },
+              {
+                "id": 576,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeTransfer:outboundTransferApproval",
+                "menuName": "门店调拨审核",
+                "menuType": "BUTTON",
+                "parentId": 554,
+                "url": ""
+              }
+            ],
+            "id": 554,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:storeTransfer",
+            "menuName": "门店调拨",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/transfer/outboundTransfer/outboundTransferShow?isShow=true"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 209,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherOutbound:create",
+                "menuName": "创建（修改）",
+                "menuType": "BUTTON",
+                "parentId": 207,
+                "url": ""
+              },
+              {
+                "id": 210,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherOutbound:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 207,
+                "url": ""
+              },
+              {
+                "id": 211,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherOutbound:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 207,
+                "url": ""
+              },
+              {
+                "id": 212,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherOutbound:confirm",
+                "menuName": "确认出库",
+                "menuType": "BUTTON",
+                "parentId": 207,
+                "url": ""
+              },
+              {
+                "id": 213,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherOutbound:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 207,
+                "url": ""
+              },
+              {
+                "id": 214,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherOutbound:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 207,
+                "url": ""
+              },
+              {
+                "id": 459,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherOutbound:undoOutbound",
+                "menuName": "撤销出库",
+                "menuType": "BUTTON",
+                "parentId": 207,
+                "url": ""
+              }
+            ],
+            "id": 207,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:otherOutbound",
+            "menuName": "其他出库单",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/outbound/otherOutbound/otherOutboundShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 215,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherInbound:create",
+                "menuName": "创建（修改）",
+                "menuType": "BUTTON",
+                "parentId": 208,
+                "url": ""
+              },
+              {
+                "id": 216,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherInbound:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 208,
+                "url": ""
+              },
+              {
+                "id": 217,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherInbound:detail",
+                "menuName": "查看详情",
+                "menuType": "BUTTON",
+                "parentId": 208,
+                "url": ""
+              },
+              {
+                "id": 218,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherInbound:confirm",
+                "menuName": "确认入库",
+                "menuType": "BUTTON",
+                "parentId": 208,
+                "url": ""
+              },
+              {
+                "id": 219,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherInbound:print",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 208,
+                "url": ""
+              },
+              {
+                "id": 220,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherInbound:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 208,
+                "url": ""
+              },
+              {
+                "id": 460,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:otherInbound:undoInbound",
+                "menuName": "撤销入库",
+                "menuType": "BUTTON",
+                "parentId": 208,
+                "url": ""
+              }
+            ],
+            "id": 208,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:otherInbound",
+            "menuName": "其他入库单",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/inbound/otherInbound/otherInboundShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 310,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:mingCheck",
+                "menuName": "明盘",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 311,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:mangCheck",
+                "menuName": "盲盘",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 312,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 313,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:updateStock",
+                "menuName": "更新库存",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 314,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:exporter",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 315,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:printer",
+                "menuName": "打印",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 316,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 317,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:edit",
+                "menuName": "修改",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 319,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:importer",
+                "menuName": "导入",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 320,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:diffAnalysis",
+                "menuName": "差异分析",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 495,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:recheck",
+                "menuName": "重盘",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 496,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:cancelRecheck",
+                "menuName": "取消重盘",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 510,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:commonCheck",
+                "menuName": "普通盘点单",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 511,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:sampleCheck",
+                "menuName": "抽盘单",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 535,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:checkDelete",
+                "menuName": "盘点单-删除货品",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 536,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:checkAdd",
+                "menuName": "盘点单-添加货品",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              },
+              {
+                "id": 553,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCheck:batchUpdateStock",
+                "menuName": "批量更新库存",
+                "menuType": "BUTTON",
+                "parentId": 309,
+                "url": ""
+              }
+            ],
+            "id": 309,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:stockCheck",
+            "menuName": "存货盘点",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/stock/checkNew/indexView"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 378,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:queryStock:stockWarning",
+                "menuName": "库存预警弹窗",
+                "menuType": "BUTTON",
+                "parentId": 377,
+                "url": ""
+              },
+              {
+                "id": 379,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:queryStock:stockWater",
+                "menuName": "流水账",
+                "menuType": "BUTTON",
+                "parentId": 377,
+                "url": ""
+              },
+              {
+                "id": 380,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:queryStock:stockHistory",
+                "menuName": "历史纪录",
+                "menuType": "BUTTON",
+                "parentId": 377,
+                "url": ""
+              },
+              {
+                "id": 381,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:queryStock:stockBatch",
+                "menuName": "批次查询",
+                "menuType": "BUTTON",
+                "parentId": 377,
+                "url": ""
+              },
+              {
+                "id": 394,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:queryStock:stockWarningSet",
+                "menuName": "库存预警设置",
+                "menuType": "BUTTON",
+                "parentId": 377,
+                "url": ""
+              }
+            ],
+            "id": 377,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:queryStock",
+            "menuName": "存货查询",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/stock/stockManage/queryStockShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 392,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockBatch:select",
+                "menuName": "保质期预警",
+                "menuType": "BUTTON",
+                "parentId": 382,
+                "url": ""
+              },
+              {
+                "id": 393,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockBatch:export",
+                "menuName": "导出",
+                "menuType": "BUTTON",
+                "parentId": 382,
+                "url": ""
+              }
+            ],
+            "id": 382,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:stockBatch",
+            "menuName": "批次查询",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/stock/stockBatch/stockBatchShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 387,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockUndo:undoOut",
+                "menuName": "撤销出库",
+                "menuType": "BUTTON",
+                "parentId": 386,
+                "url": ""
+              },
+              {
+                "id": 388,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockUndo:undoIn",
+                "menuName": "撤销入库",
+                "menuType": "BUTTON",
+                "parentId": 386,
+                "url": ""
+              }
+            ],
+            "id": 386,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:stockUndo",
+            "menuName": "出入库撤销",
+            "menuType": "BUTTON",
+            "parentId": 10,
+            "url": ""
+          },
+          {
+            "id": 453,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:stockHistoryRecord",
+            "menuName": "历史库存更新记录",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/supply/stock/stockManage/stockHistoryFailPage"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 589,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:hlsDamaged:create",
+                "menuName": "报废单创建",
+                "menuType": "BUTTON",
+                "parentId": 578,
+                "url": ""
+              },
+              {
+                "id": 590,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:hlsDamaged:delete",
+                "menuName": "报废单删除",
+                "menuType": "BUTTON",
+                "parentId": 578,
+                "url": ""
+              },
+              {
+                "id": 591,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:hlsDamaged:approvalAll",
+                "menuName": "报废单审核",
+                "menuType": "BUTTON",
+                "parentId": 578,
+                "url": ""
+              },
+              {
+                "id": 592,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:hlsDamaged:confirmDamaged",
+                "menuName": "报废单确认报废",
+                "menuType": "BUTTON",
+                "parentId": 578,
+                "url": ""
+              },
+              {
+                "id": 593,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:hlsDamaged:reApproval",
+                "menuName": "报废单反审",
+                "menuType": "BUTTON",
+                "parentId": 578,
+                "url": ""
+              },
+              {
+                "id": 594,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:hlsDamaged:repeated",
+                "menuName": "报废单反报废",
+                "menuType": "BUTTON",
+                "parentId": 578,
+                "url": ""
+              },
+              {
+                "id": 595,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:hlsDamaged:detail",
+                "menuName": "报废单详情",
+                "menuType": "BUTTON",
+                "parentId": 578,
+                "url": ""
+              },
+              {
+                "id": 605,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:hlsDamaged:update",
+                "menuName": "报废单修改",
+                "menuType": "BUTTON",
+                "parentId": 578,
+                "url": ""
+              }
+            ],
+            "id": 578,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:hlsDamaged",
+            "menuName": "门店报废",
+            "menuType": "PAGE",
+            "parentId": 10,
+            "url": "/hlsbreakage"
+          }
+        ],
+        "id": 10,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "inventory",
+        "menuName": "库存管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "id": 524,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:closeAccountIfno",
+            "menuName": "开账关账",
+            "menuType": "PAGE",
+            "parentId": 321,
+            "url": "/supply/close/account/page"
+          },
+          {
+            "id": 525,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "balance",
+            "menuName": "结存",
+            "menuType": "PAGE",
+            "parentId": 321,
+            "url": "/supply/settlement/settlement/settlementShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 324,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCost:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 323,
+                "url": ""
+              },
+              {
+                "id": 325,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:stockCost:accounting",
+                "menuName": "核算",
+                "menuType": "BUTTON",
+                "parentId": 323,
+                "url": ""
+              }
+            ],
+            "id": 323,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:stockCost",
+            "menuName": "存货成本核算",
+            "menuType": "PAGE",
+            "parentId": 321,
+            "url": "/supply/stock/cost/indexView"
+          }
+        ],
+        "id": 321,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "settlement",
+        "menuName": "结算管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "childrenList": [
+              {
+                "childrenList": [
+                  {
+                    "id": 194,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "basicInfo:dishesTemplate:create",
+                    "menuName": "创建",
+                    "menuType": "BUTTON",
+                    "parentId": 193,
+                    "url": ""
+                  },
+                  {
+                    "id": 195,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "basicInfo:dishesTemplate:delete",
+                    "menuName": "删除",
+                    "menuType": "BUTTON",
+                    "parentId": 193,
+                    "url": ""
+                  },
+                  {
+                    "id": 196,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "basicInfo:dishesTemplate:batchEdit",
+                    "menuName": "批量修改",
+                    "menuType": "BUTTON",
+                    "parentId": 193,
+                    "url": ""
+                  },
+                  {
+                    "id": 197,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "basicInfo:dishesTemplate:copy",
+                    "menuName": "复制",
+                    "menuType": "BUTTON",
+                    "parentId": 193,
+                    "url": ""
+                  },
+                  {
+                    "id": 199,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "basicInfo:dishesTemplate:edit",
+                    "menuName": "修改",
+                    "menuType": "BUTTON",
+                    "parentId": 193,
+                    "url": ""
+                  }
+                ],
+                "id": 193,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:dishesTemplate",
+                "menuName": "货品模板",
+                "menuType": "PAGE",
+                "parentId": 503,
+                "url": "/supply/config/dishesTemplate/indexView"
+              },
+              {
+                "id": 497,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:virtualDishes",
+                "menuName": "虚拟品设置",
+                "menuType": "PAGE",
+                "parentId": 503,
+                "url": "/supply/virtualDishes/virtualDishes/virtualDishesShow"
+              },
+              {
+                "childrenList": [
+                  {
+                    "id": 434,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:create",
+                    "menuName": "创建",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  },
+                  {
+                    "id": 435,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:empower",
+                    "menuName": "批量授权",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  },
+                  {
+                    "id": 436,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:deleteDishesGroup",
+                    "menuName": "删除货品组",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  },
+                  {
+                    "id": 437,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:deleteEmpower",
+                    "menuName": "删除批量授权",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  },
+                  {
+                    "id": 438,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:addDish",
+                    "menuName": "添加原料",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  },
+                  {
+                    "id": 439,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:delDish",
+                    "menuName": "删除原料",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  },
+                  {
+                    "id": 440,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:saveDish",
+                    "menuName": "保存原料",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  },
+                  {
+                    "id": 441,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:update",
+                    "menuName": "修改",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  },
+                  {
+                    "id": 526,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:batchAddDetails",
+                    "menuName": "批量添加货品",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  },
+                  {
+                    "id": 527,
+                    "isRoleAuth": false,
+                    "isUserAuth": false,
+                    "menuAlias": "inventory:dishesGroup:batchDelDetails",
+                    "menuName": "批量删除货品",
+                    "menuType": "BUTTON",
+                    "parentId": 433,
+                    "url": ""
+                  }
+                ],
+                "id": 433,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:dishesGroup",
+                "menuName": "货品组授权",
+                "menuType": "PAGE",
+                "parentId": 503,
+                "url": "/supply/dishesGroup/dishesGroupShow"
+              }
+            ],
+            "id": 503,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "dishesManager",
+            "menuName": "货品管理",
+            "menuType": "MENU",
+            "parentId": 86,
+            "url": ""
+          },
+          {
+            "id": 573,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "basicInfo:fieldConfig",
+            "menuName": "品牌页面设置",
+            "menuType": "PAGE",
+            "parentId": 86,
+            "url": "/supply/baseinfo/field_config/interfaceConfigPage"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 232,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouse:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 231,
+                "url": ""
+              },
+              {
+                "id": 270,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouse:enable",
+                "menuName": "启用",
+                "menuType": "BUTTON",
+                "parentId": 231,
+                "url": ""
+              },
+              {
+                "id": 271,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouse:disable",
+                "menuName": "禁用",
+                "menuType": "BUTTON",
+                "parentId": 231,
+                "url": ""
+              },
+              {
+                "id": 272,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouse:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 231,
+                "url": ""
+              },
+              {
+                "id": 273,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouse:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 231,
+                "url": ""
+              },
+              {
+                "id": 274,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouse:edit",
+                "menuName": "编辑",
+                "menuType": "BUTTON",
+                "parentId": 231,
+                "url": ""
+              }
+            ],
+            "id": 231,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:storeHouse",
+            "menuName": "仓库档案",
+            "menuType": "PAGE",
+            "parentId": 86,
+            "url": "/supply/storehouse/storeHouse/storeHouseShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 389,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:supplyConfig:save",
+                "menuName": "保存",
+                "menuType": "BUTTON",
+                "parentId": 205,
+                "url": ""
+              }
+            ],
+            "id": 205,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "basicInfo:supplyConfig",
+            "menuName": "供应链配置",
+            "menuType": "PAGE",
+            "parentId": 86,
+            "url": "/supply/config/supplyConfig/configTreeShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 132,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseEarlyLeadingIn:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 130,
+                "url": ""
+              },
+              {
+                "id": 134,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseEarlyLeadingIn:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 130,
+                "url": ""
+              },
+              {
+                "id": 136,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseEarlyLeadingIn:approval",
+                "menuName": "立即生效",
+                "menuType": "BUTTON",
+                "parentId": 130,
+                "url": ""
+              },
+              {
+                "id": 143,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseEarlyLeadingIn:uploadTpl",
+                "menuName": "期初导入",
+                "menuType": "BUTTON",
+                "parentId": 130,
+                "url": ""
+              },
+              {
+                "id": 146,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseEarlyLeadingIn:downloadTpl",
+                "menuName": "下载导入模板",
+                "menuType": "BUTTON",
+                "parentId": 130,
+                "url": ""
+              },
+              {
+                "id": 147,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseEarlyLeadingIn:detail",
+                "menuName": "详情",
+                "menuType": "BUTTON",
+                "parentId": 130,
+                "url": ""
+              }
+            ],
+            "id": 130,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:storeHouseEarlyLeadingIn",
+            "menuName": "期初导入",
+            "menuType": "PAGE",
+            "parentId": 86,
+            "url": "/supply/storehouse/storeHouseEarlyLeadingIn/index"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 234,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:dishesTag:create",
+                "menuName": "创建",
+                "menuType": "BUTTON",
+                "parentId": 233,
+                "url": ""
+              },
+              {
+                "id": 235,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:dishesTag:save",
+                "menuName": "保存",
+                "menuType": "BUTTON",
+                "parentId": 233,
+                "url": ""
+              },
+              {
+                "id": 289,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:dishesTag:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 233,
+                "url": ""
+              }
+            ],
+            "id": 233,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "basicInfo:dishesTag",
+            "menuName": "货品标签",
+            "menuType": "PAGE",
+            "parentId": 86,
+            "url": "/supply/dishesTag/dishesTagShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 385,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:financialSet:create",
+                "menuName": "创建或修改",
+                "menuType": "BUTTON",
+                "parentId": 236,
+                "url": ""
+              }
+            ],
+            "id": 236,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "basicInfo:financeSet",
+            "menuName": "财务设置",
+            "menuType": "PAGE",
+            "parentId": 86,
+            "url": "/supply/financialSet/financeSetShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 494,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "basicInfo:systemConfig:save",
+                "menuName": "保存",
+                "menuType": "BUTTON",
+                "parentId": 493,
+                "url": ""
+              }
+            ],
+            "id": 493,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "basicInfo:systemConfig",
+            "menuName": "系统参数",
+            "menuType": "PAGE",
+            "parentId": 86,
+            "url": "/supply/system/systemConfig/inOrOutboundTimeWayShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 443,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseGoods:storeHouse",
+                "menuName": "仓库档案",
+                "menuType": "BUTTON",
+                "parentId": 442,
+                "url": ""
+              },
+              {
+                "id": 444,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseGoods:empower",
+                "menuName": "授权管理",
+                "menuType": "BUTTON",
+                "parentId": 442,
+                "url": ""
+              },
+              {
+                "id": 445,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseGoods:enabledAll",
+                "menuName": "启用",
+                "menuType": "BUTTON",
+                "parentId": 442,
+                "url": ""
+              },
+              {
+                "id": 446,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseGoods:disabledAll",
+                "menuName": "禁用",
+                "menuType": "BUTTON",
+                "parentId": 442,
+                "url": ""
+              },
+              {
+                "id": 447,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseGoods:storeHouseDish",
+                "menuName": "货架管理",
+                "menuType": "BUTTON",
+                "parentId": 442,
+                "url": ""
+              }
+            ],
+            "id": 442,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:storeHouseGoods",
+            "menuName": "仓库货品",
+            "menuType": "PAGE",
+            "parentId": 86,
+            "url": "/supply/storeHouseGoods/storeHouseGoodsShow"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 291,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseDish:createRack",
+                "menuName": "创建货架",
+                "menuType": "BUTTON",
+                "parentId": 290,
+                "url": ""
+              },
+              {
+                "id": 292,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseDish:delRack",
+                "menuName": "删除货架",
+                "menuType": "BUTTON",
+                "parentId": 290,
+                "url": ""
+              },
+              {
+                "id": 293,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseDish:emptyRack",
+                "menuName": "清空货架",
+                "menuType": "BUTTON",
+                "parentId": 290,
+                "url": ""
+              },
+              {
+                "id": 294,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseDish:editRack",
+                "menuName": "编辑货架",
+                "menuType": "BUTTON",
+                "parentId": 290,
+                "url": ""
+              },
+              {
+                "id": 295,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseDish:add",
+                "menuName": "添加原料",
+                "menuType": "BUTTON",
+                "parentId": 290,
+                "url": ""
+              },
+              {
+                "id": 296,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseDish:batchAddOrDel",
+                "menuName": "批量添加/删除原料",
+                "menuType": "BUTTON",
+                "parentId": 290,
+                "url": ""
+              },
+              {
+                "id": 297,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseDish:transferRack",
+                "menuName": "货架转移",
+                "menuType": "BUTTON",
+                "parentId": 290,
+                "url": ""
+              },
+              {
+                "id": 298,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "inventory:storeHouseDish:delete",
+                "menuName": "删除存货",
+                "menuType": "BUTTON",
+                "parentId": 290,
+                "url": ""
+              }
+            ],
+            "id": 290,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "inventory:storeHouseDish",
+            "menuName": "仓库货架管理",
+            "menuType": "PAGE",
+            "parentId": 86,
+            "url": "/supply/storehouse/storeHouseDish/indexView"
+          }
+        ],
+        "id": 86,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "basicInfo",
+        "menuName": "基础管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "id": 403,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "system:operationLog",
+            "menuName": "业务日志",
+            "menuType": "PAGE",
+            "parentId": 402,
+            "url": "/supply/system/operationLog/index"
+          },
+          {
+            "id": 521,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "system:apiLog",
+            "menuName": "接口日志",
+            "menuType": "PAGE",
+            "parentId": 402,
+            "url": "/supply/system/apiLog/index"
+          },
+          {
+            "id": 519,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "system:apiException",
+            "menuName": "异常日志",
+            "menuType": "PAGE",
+            "parentId": 402,
+            "url": "/supply/system/exceptionLog/index"
+          }
+        ],
+        "id": 402,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "system",
+        "menuName": "系统管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "childrenList": [
+              {
+                "id": 512,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:receiveAndDispatchH",
+                "menuName": "收发汇总表（H）",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/receiveAndDispatch/receiveAndDispatchShowH"
+              },
+              {
+                "id": 487,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:receiveAndDispatch",
+                "menuName": "收发汇总表",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/receiveAndDispatch/receiveAndDispatchShow"
+              },
+              {
+                "id": 484,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:materialUseEfficiency",
+                "menuName": "货品使用效率表",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/materialUseEfficiency/materialUseEfficiencyShow"
+              },
+              {
+                "id": 409,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:distribute",
+                "menuName": "库存分布查询",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/stockDistribute/index"
+              },
+              {
+                "id": 485,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:otherOutboundDetail",
+                "menuName": "其他出库明细表",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/otherOutboundDetail/otherOutboundDetailShow"
+              },
+              {
+                "id": 486,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:otherInboundDetail",
+                "menuName": "其他入库明细表",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/otherInboundDetail/otherInboundDetailShow"
+              },
+              {
+                "id": 432,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:inOutboundCollect",
+                "menuName": "其他出入库汇总",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/otherInOutboundCollect/index"
+              },
+              {
+                "id": 490,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:lossEntry",
+                "menuName": "损耗录入表",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/lossEntry/lossEntryShow"
+              },
+              {
+                "id": 426,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:check",
+                "menuName": "盘点报表",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/check/checkReportShow"
+              },
+              {
+                "id": 427,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:checkDiff",
+                "menuName": "盘点日差异报表",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/checkDiff/index"
+              },
+              {
+                "id": 582,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:checkDiff:week",
+                "menuName": "盘点周差异报表",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/checkDiff/weekCheckDiffPage"
+              },
+              {
+                "id": 583,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:checkDiff:month",
+                "menuName": "盘点月差异报表",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/checkDiff/monthCheckDiffPage"
+              },
+              {
+                "id": 491,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:checkDiffForZGZD",
+                "menuName": "盘点差异报表（Z）",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/checkDiffForZGZD/index"
+              },
+              {
+                "id": 501,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:checkDay",
+                "menuName": "货品盘点日报表（Z）",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/checkDay/dayIndex"
+              },
+              {
+                "id": 502,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:checkWeek",
+                "menuName": "货品盘点周报表（Z）",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/checkDay/weekIndex"
+              },
+              {
+                "id": 428,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:stock:checkMonth",
+                "menuName": "货品盘点月报表（Z）",
+                "menuType": "PAGE",
+                "parentId": 408,
+                "url": "/supply/report/checkMonth/index"
+              }
+            ],
+            "id": 408,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "report:stock",
+            "menuName": "存货报表",
+            "menuType": "MENU",
+            "parentId": 407,
+            "url": ""
+          },
+          {
+            "childrenList": [
+              {
+                "id": 430,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:market:detail",
+                "menuName": "销售明细报表",
+                "menuType": "PAGE",
+                "parentId": 429,
+                "url": "/supply/report/marketOrderDetail/marketOrderDetailShow"
+              },
+              {
+                "id": 431,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:market:gross",
+                "menuName": "销售毛利报表",
+                "menuType": "PAGE",
+                "parentId": 429,
+                "url": "/supply/report/marketOrderGrossProfit/marketOrderGrossProfitShow"
+              }
+            ],
+            "id": 429,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "report:market",
+            "menuName": "销售报表",
+            "menuType": "MENU",
+            "parentId": 407,
+            "url": ""
+          },
+          {
+            "childrenList": [
+              {
+                "id": 462,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:overTimeStatistics",
+                "menuName": "要货超时统计表",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/report/overTimeStatistics/overTimeStatisticsShow"
+              },
+              {
+                "id": 463,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:takeGoodsDetail",
+                "menuName": "要货明细表",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/report/takeGoodsDetail/takeGoodsDetailShow"
+              },
+              {
+                "id": 464,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:summaryExport",
+                "menuName": "要货量汇总",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/summary/summaryTakeGoods/export"
+              },
+              {
+                "id": 465,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:outboundDetail",
+                "menuName": "要货出库明细表",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/report/takeGoodsOutboundDetail/outboundDetailShow"
+              },
+              {
+                "id": 466,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:takeGoodsProfitDetail",
+                "menuName": "要货利润明细表",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/report/takeGoodsProfitDetail/takeGoodsProfitDetailShow"
+              },
+              {
+                "id": 467,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:takeGoodsSummaryOfReceivable",
+                "menuName": "应收汇总表",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/report/takeGoodsSummaryOfReceivable/takeGoodsSummaryOfReceivableShow"
+              },
+              {
+                "id": 468,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:returnTakeGoodsDetail",
+                "menuName": "要货退货明细表",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/report/returnTakeGoodsDetail/returnTakeGoodsDetailShow"
+              },
+              {
+                "id": 469,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:takeGoodsSummaryOfReceivableDetail",
+                "menuName": "应收明细表",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/report/takeGoodsSummaryOfReceivableDetail/takeGoodsSummaryOfReceivableDetailShow"
+              },
+              {
+                "id": 470,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:takeGoodsProfit",
+                "menuName": "要货利润汇总表",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/report/takeGoodsProfit/takeGoodsProfitShow"
+              },
+              {
+                "id": 471,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:takegood:balanceOfAccountReport",
+                "menuName": "要货对账明细表",
+                "menuType": "PAGE",
+                "parentId": 456,
+                "url": "/supply/report/balanceOfAccount/balanceOfAccountReportShow"
+              }
+            ],
+            "id": 456,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "report:takegood",
+            "menuName": "要货报表",
+            "menuType": "MENU",
+            "parentId": 407,
+            "url": ""
+          },
+          {
+            "childrenList": [
+              {
+                "id": 472,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:transfer:transferOfReceivable",
+                "menuName": "调拨应收明细表",
+                "menuType": "PAGE",
+                "parentId": 461,
+                "url": "/supply/report/transferOfReceivable/transferOfReceivableShow"
+              },
+              {
+                "id": 473,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:transfer:transferOfPayable",
+                "menuName": "调拨应付明细表",
+                "menuType": "PAGE",
+                "parentId": 461,
+                "url": "/supply/report/transferOfPayable/transferOfPayableShow"
+              },
+              {
+                "id": 474,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:transfer:transferOfARAP",
+                "menuName": "调拨应收应付汇总报表",
+                "menuType": "PAGE",
+                "parentId": 461,
+                "url": "/supply/report/transferOfARAP/transferOfARAPShow"
+              }
+            ],
+            "id": 461,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "report:transfer",
+            "menuName": "调拨报表",
+            "menuType": "MENU",
+            "parentId": 407,
+            "url": ""
+          },
+          {
+            "childrenList": [
+              {
+                "id": 476,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:procurement:procurementInboundDetail",
+                "menuName": "采购入库明细表",
+                "menuType": "PAGE",
+                "parentId": 475,
+                "url": "/supply/report/procurementInboundDetail/procurementInboundDetailShow"
+              },
+              {
+                "id": 477,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:procurement:returnProcurementDetail",
+                "menuName": "采购退货明细表",
+                "menuType": "PAGE",
+                "parentId": 475,
+                "url": "/supply/report/returnProcurementDetail/returnProcurementDetailShow"
+              },
+              {
+                "id": 478,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:procurement:procurementCostAnalysis",
+                "menuName": "采购成本分析表",
+                "menuType": "PAGE",
+                "parentId": 475,
+                "url": "/supply/report/procurementCostAnalysis//procurementCostAnalysisShow"
+              },
+              {
+                "id": 479,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:procurement:procurementDirectInboundDiff",
+                "menuName": "采购直送入库利润明细表",
+                "menuType": "PAGE",
+                "parentId": 475,
+                "url": "/supply/report/procurementDirectInboundDiff/procurementDirectInboundDiffShow"
+              },
+              {
+                "id": 481,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:procurement:purchasePayableSummary",
+                "menuName": "采购应付汇总报表",
+                "menuType": "PAGE",
+                "parentId": 475,
+                "url": "/supply/report/inOutReport/purchasePayableSummary"
+              },
+              {
+                "id": 482,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:procurement:purchasePayableDetails",
+                "menuName": "采购应付明细报表",
+                "menuType": "PAGE",
+                "parentId": 475,
+                "url": "/supply/report/inOutReport/purchasePayableDetails"
+              }
+            ],
+            "id": 475,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "report:procurement",
+            "menuName": "采购报表",
+            "menuType": "MENU",
+            "parentId": 407,
+            "url": ""
+          },
+          {
+            "childrenList": [
+              {
+                "id": 514,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:store:payable",
+                "menuName": "应付汇总表",
+                "menuType": "PAGE",
+                "parentId": 513,
+                "url": "/supply/report/store/payableShow"
+              },
+              {
+                "id": 515,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:store:receivable",
+                "menuName": "应收汇总表",
+                "menuType": "PAGE",
+                "parentId": 513,
+                "url": "/supply/report/store/receivableShow"
+              },
+              {
+                "id": 537,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "report:store:claimDemage",
+                "menuName": "门店货赔表",
+                "menuType": "PAGE",
+                "parentId": 513,
+                "url": "/supply/report/store/claimDemageShow"
+              }
+            ],
+            "id": 513,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "report:store",
+            "menuName": "门店报表",
+            "menuType": "MENU",
+            "parentId": 407,
+            "url": ""
+          }
+        ],
+        "id": 407,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "report",
+        "menuName": "报表管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      },
+      {
+        "childrenList": [
+          {
+            "childrenList": [
+              {
+                "id": 499,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "permission:user:saveDataPermission",
+                "menuName": "保存",
+                "menuType": "BUTTON",
+                "parentId": 498,
+                "url": ""
+              },
+              {
+                "id": 500,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "permission:user:coverOrAdditional",
+                "menuName": "权限复制",
+                "menuType": "BUTTON",
+                "parentId": 498,
+                "url": ""
+              }
+            ],
+            "id": 498,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "permission.sysuser",
+            "menuName": "用户管理",
+            "menuType": "PAGE",
+            "parentId": 405,
+            "url": "/supply/permission/sysuser/list"
+          },
+          {
+            "id": 406,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "permission:menu",
+            "menuName": "菜单管理",
+            "menuType": "PAGE",
+            "parentId": 405,
+            "url": "/supply/permission/menu/list"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 411,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "permission:role:update",
+                "menuName": "创建或修改",
+                "menuType": "BUTTON",
+                "parentId": 410,
+                "url": ""
+              },
+              {
+                "id": 413,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "permission:role:saveUserRole",
+                "menuName": "分配用户",
+                "menuType": "BUTTON",
+                "parentId": 410,
+                "url": ""
+              },
+              {
+                "id": 414,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "permission:role:saveRoleMenu",
+                "menuName": "分配功能权限",
+                "menuType": "BUTTON",
+                "parentId": 410,
+                "url": ""
+              }
+            ],
+            "id": 410,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "permission:role",
+            "menuName": "角色管理",
+            "menuType": "PAGE",
+            "parentId": 405,
+            "url": "/supply/role/role/list"
+          },
+          {
+            "childrenList": [
+              {
+                "id": 424,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "permission:organization:update",
+                "menuName": "创建或修改",
+                "menuType": "BUTTON",
+                "parentId": 423,
+                "url": ""
+              },
+              {
+                "id": 425,
+                "isRoleAuth": false,
+                "isUserAuth": false,
+                "menuAlias": "permission:organization:delete",
+                "menuName": "删除",
+                "menuType": "BUTTON",
+                "parentId": 423,
+                "url": ""
+              }
+            ],
+            "id": 423,
+            "isRoleAuth": false,
+            "isUserAuth": false,
+            "menuAlias": "permission:organization",
+            "menuName": "组织管理",
+            "menuType": "PAGE",
+            "parentId": 405,
+            "url": "/supply/organization/organization/list"
+          }
+        ],
+        "id": 405,
+        "isRoleAuth": false,
+        "isUserAuth": false,
+        "menuAlias": "permission",
+        "menuName": "权限管理",
+        "menuType": "MENU",
+        "parentId": 0,
+        "url": ""
+      }
+    ],
+    "msg": "操作成功",
+    "success": true
+  },
+  "status": 200,
+  "statusText": "OK",
+  "headers": {
+    "connection": "close",
+    "content-length": "86897",
+    "content-type": "application/json;charset=UTF-8",
+    "date": "Wed, 12 Feb 2020 07:14:43 GMT",
+    "x-powered-by": "Express"
+  },
+  "config": {
+    "transformRequest": {},
+    "transformResponse": {},
+    "timeout": 60000,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "X-Requested-With": "XMLHttpRequest"
+    },
+    "method": "get",
+    "url": "api/mobile/supply/apply/permission/menu/sidebar"
+  },
+  "request": {}
+}
+var result = data.data.data;
+function leaveRights(data){
+    let res = {};
+    function leave(r){
+        r.forEach(item=>{
+            if(item.childrenList){
+                leave(item.childrenList);
+            }
+            res[item.menuAlias] = item.menuName;
+        })
+    }
+    leave(data);
+    return res;
+}
+var a = leaveRights(result);
+console.log(a);
+
+
+</script>
+</html>
