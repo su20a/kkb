@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var array = [3,4,5,4,4];
+    let arr = array.reduce((init,item)=>{
+         init.indexOf(item) == -1 ? init.push(item) : "";
+         return init;
+      },[])
+    
+      function test1(){
+          var init = [];
+          return 1 == 1 ? init.push(5) : ''; 
+      }
+      function test2(){
+          var init = [];
+          1 == 1 ? init.push(5) : ''; 
+          return init;
+      }
+      function test3(){
+          var init = [];
+          return init.push(6);
+      }
+      console.log(test1());
+      console.log(test2());
+      console.log(test3());
+</script>
+</html>
