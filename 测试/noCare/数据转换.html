@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var data = [{"customerId":325,"customerName":"2","detailDTOS":[{"ali":0E-15,"amount":2.0000,"avAmount":2.000000000000000,"cash":2.000000000000000000000000000000,"date":"2020-02-24","discount":0,"num":1.00,"other":0E-15,"payAll":0,"unionPay":0E-30,"unpay":0,"wx":0E-15}],"dishCode":"99900118","dishId":350834,"dishName":"红豆派","organizationName":""},{"customerId":325,"customerName":"2","detailDTOS":[{"ali":0E-15,"amount":10.0000,"avAmount":10.000000000000000,"cash":9.999999999999990000000000000000,"date":"2020-02-24","discount":0,"num":1.00,"other":0E-15,"payAll":0,"unionPay":0E-30,"unpay":0,"wx":0E-15}],"dishCode":"99900225","dishId":417127,"dishName":"实际品1","organizationName":""},{"customerId":325,"customerName":"2","detailDTOS":[{"ali":0E-15,"amount":20.0000,"avAmount":20.000000000000000,"cash":20.000000000000010000000000000000,"date":"2020-02-24","discount":0,"num":1.00,"other":0E-15,"payAll":0,"unionPay":0E-15,"unpay":0,"wx":0E-15}],"dishCode":"99900226","dishId":417128,"dishName":"实际品2","organizationName":""},{"customerId":324,"customerName":"1","detailDTOS":[{"ali":0E-15,"amount":30.0000,"avAmount":15.000000000000000,"cash":30.000000000000000000000000000000,"date":"2020-02-24","discount":0,"num":2.00,"other":0E-15,"payAll":0,"unionPay":0E-30,"unpay":0,"wx":0E-15}],"dishCode":"99900226","dishId":417128,"dishName":"实际品2","organizationName":""},{"customerId":324,"customerName":"1","detailDTOS":[{"ali":0E-15,"amount":2.0000,"avAmount":2.000000000000000,"cash":2.000000000000000000000000000000,"date":"2020-02-24","discount":0,"num":1.00,"other":0E-15,"payAll":0,"unionPay":0E-30,"unpay":0,"wx":0E-15}],"dishCode":"99900119","dishId":350835,"dishName":"唐扬鸡块","organizationName":""}]
+    function leaveData(data){
+        var res = [];
+        data.forEach(function(item){
+            var merge = {};
+            // 获取日期
+            var date = item.detailDTOS[0].date;
+            // 属性拼接日期
+            for(var key in item){
+                if(key == 'detailDTOS'){
+                    for(var k in item[key][0]){
+                        var mergeK = k + date;
+                        merge[mergeK] = item[key][0][k];
+                    }
+                }
+                var mergeKey = key + date;
+                merge[mergeKey] = item[key];
+            }
+            res.push(merge);
+        });
+        return res;
+    }
+    var newData = leaveData(data);
+    console.log(newData);
+
+</script>
+</html>

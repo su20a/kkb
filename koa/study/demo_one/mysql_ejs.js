@@ -3,6 +3,7 @@ const views = require('koa-views')
 const path = require('path')
 const static = require('koa-static')
 const Router = require('koa-router')
+const myMysql= require('./mysql')
 const app = new Koa()
 // 静态资源路径
 const staticPath = './static'
@@ -11,14 +12,18 @@ app.use(static(
   path.join( __dirname,  staticPath)
 ))
 // 加载模板引擎
-app.use(views(path.join(__dirname, './views'), {
+app.use(views(path.join(__dirname, './view'), {
   extension: 'ejs'
 }))
 
 router.get('/index',async ( ctx ) => {
   let title = 'hello koa2'
+  let data = await myMysql.query();
+  console.log(data);
   await ctx.render('index', {
-    title
+    title,
+    data,
+    html:'<b>is b flag</b>'
   })
 })
 app.use(router.routes());
