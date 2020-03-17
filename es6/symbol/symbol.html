@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  var o = new Object;
+  o[Symbol.iterator] = function () {
+    var num = 0;
+    return {
+      next: function () {
+        return { value: ++num, done: num > 10 }
+      }
+    }
+  }
+  for (var val of o) {
+    console.log(val)
+  }
+
+  var obj = {
+    valueOf: () => { console.log('valueOf'); return {} },
+    toString: () => { console.log('toString'); return {} }
+  }
+  //console.log(obj - 3)
+  obj[Symbol.toPrimitive] = () => { return 'hello' }
+  console.log(obj + 'sss')
+</script>
+
+</html>
