@@ -1,0 +1,19 @@
+@default-color:pink;
+.type1(@color:@default-color){
+    color:@color;
+}
+.type1(@color,@font-size){
+    color:@color;
+    font-size:@font-size;
+}
+.item-one{
+    .type1(black,30px)
+}
+.item-two{
+    width:0px;
+    height:0px;
+    border-width:20px;
+    border-style: solid;
+    border-color: blue green pink yellow;
+    border-radius:50%;
+}

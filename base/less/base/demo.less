@@ -1,4 +1,7 @@
 @img:'../img';
+@p:.paragram;
+@op:.other;
+@merge:~'@{p},@{op}';
 div{
     width: 200px;
     height:200px;
@@ -12,4 +15,10 @@ div{
 }
 .three{
     background:url('@{img}/2.jpg') no-repeat;
+}
+@{p} {
+    color:deeppink;
+}
+@{merge}{
+    background:green;
 }
