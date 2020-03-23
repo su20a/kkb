@@ -122,3 +122,46 @@ f(4);   // i 4  4+3   7 */
   }()
 }
 console.log(JSON.stringify(obj)) */
+
+// 判断体中函数的变量提升
+/* function test () {
+  console.log(num) // 判断体中的函数只会声明 此处num值未undefined
+  if (1 == 1) {
+    function num () {
+      console.log(34)
+    }
+  }
+}
+test() */
+
+// 在if语句中不管条件是否成立 var声明的变量都要进行变量提升
+
+// use strict  开启js的严格模式
+// 1.在严格模式下不支持使用 “arguments.callee / arguments.callee.caller” （Uncaught TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them）
+// 2.在严格模式下ARGUMENTS和形参没有映射机制
+// 3.在严格模式下不允许给一个对象设置重复属性名的：“obj={n:10,n:20}”
+// 4.在严格模式下，函数执行，如果没有明确指定执行的主体（函数前面没有点），不再像非严格模式下一样，统一都交给window，而是让this指向undefined，代表没有执行主体：“严格模式下，有执行主体this就指向谁，没有执行主体，this就是undefined”
+// 5.高程三，最后有严格模式和非严格模式汇总
+
+
+// A&&B  如果A为真则 用B  如果A为假 则就用A
+/* var b = 1 && 0
+console.log(b) */
+
+
+// 数组去重
+var arr = [1, 2, 3, 2, 3, 421, 1]
+function unique (arr) {
+  var obj = {}
+  for (var i = 0; i < arr.length; i++) {
+    if (obj.hasOwnProperty(arr[i])) {
+      arr[i] = arr[arr.length - 1]
+      arr.pop()
+      i--
+    } else {
+      obj[arr[i]] = 1
+    }
+  }
+}
+unique(arr)
+console.log(arr)
