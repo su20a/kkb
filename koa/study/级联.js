@@ -5,6 +5,7 @@ const app = new Koa();
 app.keys = ['im a newer secret', 'i like turtle'];
 app.use(async (ctx, next) => {
   const start = Date.now();
+  ctx.state.user = 'wawa';
   await next();
   const ms = Date.now() - start;
   ctx.cookies.set('name', 'tobi', { signed: true });
@@ -15,6 +16,7 @@ app.use(async (ctx, next) => {
 
 app.use(async (ctx, next) => {
   const start = Date.now();
+  console.log(ctx.state.user);
   await next();
   const ms = Date.now() - start;
   console.log(`${ctx.method} ${ctx.url} - ${ms}`);
