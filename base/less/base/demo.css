@@ -12,3 +12,10 @@ div {
 .three {
   background: url('../img/2.jpg') no-repeat;
 }
+.paragram {
+  color: deeppink;
+}
+.paragram,
+.other {
+  background: green;
+}

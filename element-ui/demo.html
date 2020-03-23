@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+      .transition-box {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #409EFF;
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+
+
+
+
+  .el-header, .el-footer {
+    background-color: #B3C0D1;
+  }
+  
+  .el-aside {
+    background-color: #D3DCE6;
+  }
+  
+  .el-main {
+    background-color: #E9EEF3;
+    line-height: 160px;
+  }
+  
+  body > .el-container {
+    /* margin-bottom: 40px; */
+  }
+
+  </style>
+</head>
+<body>
+  <div id="app">
+    <el-button @click="visible = true">Button</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+      <p>Try Element</p>
+    </el-dialog>
+    <div>
+    <el-button @click="show2 = !show2">Click Me</el-button>
+
+    <div style="display: flex; margin-top: 20px; height: 100px;">
+      <transition name="el-zoom-in-center">
+        <div v-show="show2" class="transition-box">.el-zoom-in-center</div>
+      </transition>
+
+      <transition name="el-zoom-in-top">
+        <div v-show="show2" class="transition-box">.el-zoom-in-top</div>
+      </transition>
+
+      <transition name="el-zoom-in-bottom">
+        <div v-show="show2" class="transition-box">.el-zoom-in-bottom</div>
+      </transition>
+    </div>
+  </div>
+  
+  <el-container>
+    <el-header>Header</el-header>
+    <el-container>
+      <el-aside width="200px">Aside</el-aside>
+      <el-container>
+        <el-main>
+            <el-aside width="150px">555</el-aside>
+            <el-container>
+                <el-main>hah</el-main>
+                <el-footer>footer</el-footer>
+            </el-container>
+        </el-main>
+        <el-footer>Footer</el-footer>
+      </el-container>
+    </el-container>
+  </el-container>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function() {
+        return { 
+            visible: false,
+            show2: true
+        }
+      }
+    })
+  </script>
+</html>
