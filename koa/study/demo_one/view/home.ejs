@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/js/css/layui.css">
+</head>
+
+<body>
+  <%  %>
+</body>
+<script src="/js/layui.all.js"></script>
+
+</html>
+<script>
+  //Demo
+  layui.use('form', function () {
+    var form = layui.form;
+    //监听提交
+    form.on('submit(formDemo)', function (data) {
+      layer.msg(JSON.stringify(data.field));
+      return false;
+    });
+  });
+</script>
