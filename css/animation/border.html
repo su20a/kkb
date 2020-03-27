@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover-bg-line {
+    transition: background-size 500ms linear;
+    background: linear-gradient(90deg, #6ed800 0, #02b0d8 98%) no-repeat left bottom;
+    background-size: 0 3px;
+    padding-bottom: 3px;
+}
+
+.hover-bg-line:hover {
+    background-size: 100% 3px;
+}
+    </style>
+</head>
+<body>
+    <a
+    class="hover-bg-line"
+    id="wrap"
+     data-name="lsi">
+        以父元素的百分比来设置背景图像的宽度和高度二个值会被设置为 "auto"。<br>
+    </a>
+</body>
+</html>
