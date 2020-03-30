@@ -1,12 +1,12 @@
 const Koa = require('koa')
 const views = require('koa-views')
 const path = require('path')
-const static = require('koa-static')
+const statics = require('koa-static')
 const Router = require('koa-router')
 const app = new Koa()
 const staticPath = './static'
-let router = new Router()
-app.use(static(
+const router = new Router()
+app.use(statics(
   path.join(__dirname, staticPath)
 ))
 app.use(
@@ -16,28 +16,28 @@ app.use(
 )
 app.use(router.routes())
 const multer = require('koa-multer')
-//配置
+// 配置
 var storage = multer.diskStorage({
-  //文件保存路径
+  // 文件保存路径
   destination: function (req, file, cb) {
-    cb(null, '/static/imgs/') //注意路径必须存在
+    cb(null, 'static/imgs/') // 注意路径必须存在
   },
-  //修改文件名称
+  // 修改文件名称
   filename: function (req, file, cb) {
     var fileFormat = file.originalname.split('.')
     console.log(fileFormat)
     cb(null, Date.now() + '.' + fileFormat[fileFormat.length - 1])
   }
 })
-//加载配置
+// 加载配置
 var upload = multer({
   storage: storage
 })
 
-router.post('/uploadImg', upload.single('face'), async (ctx, next) => {
+router.post('/uploadImg', upload.single('file'), async (ctx, next) => {
   console.log(ctx.req.file)
   ctx.body = {
-    filename: ctx.req.file.filename, //返回文件名
+    filename: ctx.req.file.filename, // 返回文件名
     body: ctx.req.body
   }
 })
